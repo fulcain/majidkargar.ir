@@ -9,7 +9,6 @@ import hamburgerMenu from "./components/hamburgerMenu.js";
 document.addEventListener("DOMContentLoaded", init);
 //  functions START
 function init() {
-	changeTheme();
 	hamburgerMenu();
 	pageLoader();
 	renderProjects();
@@ -37,25 +36,6 @@ function renderContactMe() {
 			contactMeLinks[i].link
 		);
 	}
-}
-// TITLE: theme changer
-// toggles the class on body to change the theme if the theme icon is pressed
-// changes the theme icon class based on body class
-function changeTheme() {
-	// selectors
-	let htmlEl = document.querySelector("html"),
-		themeIcon = document.querySelector("#themeChanger")
-
-	// changes theme and themeIcon color
-	themeChanger.addEventListener("click", () => {
-		if (htmlEl.getAttribute("data-theme") != "dark") {
-			htmlEl.setAttribute("data-theme", "dark");
-			themeChanger.children[0].style.left= "5px"
-		} else {
-			htmlEl.setAttribute("data-theme", "light");
-			themeChanger.children[0].style.left= "59%"
-		}
-	});
 }
 
 // TITLE: page loader

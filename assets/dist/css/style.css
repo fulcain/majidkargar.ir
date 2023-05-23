@@ -23,14 +23,6 @@ html[data-theme=dark] {
   --footer-icon-hover: #0e1d34;
 }
 
-html[data-theme=light] {
-  --primary-color: #0072C6;
-  --secondary-color: #F2F4F5;
-  --font-color: #212121;
-  --hero-border-color: #daf5ff;
-  --footer-icon-hover: #6aa9d3;
-}
-
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -148,8 +140,8 @@ section {
 }
 
 header {
-  background-color: var(--primary-color);
-  box-shadow: 0 0 40px var(--primary-color);
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 20px var(--secondary-color);
   position: fixed;
   top: 0;
   right: 0;
@@ -169,24 +161,6 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-header #themeChanger {
-  cursor: pointer;
-  width: 50px;
-  height: 20px;
-  border-radius: 50px;
-  background-color: #5f5f5f;
-  position: relative;
-}
-header #themeChanger #themeChangerInside {
-  transition: 0.2s linear;
-  position: absolute;
-  top: calc(50% - 7.5px);
-  left: 5px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50px;
-  background-color: var(--secondary-color);
 }
 header #normal-nav ul {
   display: flex;
