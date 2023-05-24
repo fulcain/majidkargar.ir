@@ -1,0 +1,21 @@
+// variables START ---
+:root {
+	--title-fontSize: 35px;
+	--navbar-font-size: 18px;
+	--biography-font-size: 18px;
+	--project-title-fontSize: 20px;
+	--github-link-font-size: 18px;
+	--contactMe-font-size: 18px;
+	--heroSection-image-div-size: 400px;
+	--header-icon-logo-size: 50px;
+	--header-icon-themeIcon-size: 40px;
+	--border-radius: 7px;
+}
+html[data-theme="dark"] {
+	--primary-color: #1c2237;
+	--secondary-color: #0a192f;
+	--font-color: #bfbfbf;
+	--hero-border-color: #a9a9a9;
+	--footer-icon-hover: #0a192f;
+}
+// variables END ---

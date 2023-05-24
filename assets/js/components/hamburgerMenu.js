@@ -1,5 +1,5 @@
 // TITLE: hamburger menu
-function hamburgerMenu() {
+function hamburgerMenuTemplate() {
     let hamburgerMenuEl = document.querySelector('#hamburger-menu'),
         hamburgerContent = document.querySelector('#hamburger-content');
 
@@ -13,4 +13,4 @@ function hamburgerMenu() {
     })
 }
 
-export default hamburgerMenu
+export default hamburgerMenuTemplate
