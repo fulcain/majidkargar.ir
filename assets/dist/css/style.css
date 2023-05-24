@@ -359,19 +359,6 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
   background-color: var(--font-color);
 }
 
-::-webkit-scrollbar {
-  width: 0.7em;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: var(--border-radius);
-  background-color: var(--secondary-color);
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--primary-color);
-}
-
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
