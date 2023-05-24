@@ -365,6 +365,10 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
   font-family: comicJasem, cursive, Impact;
 }
 
+a {
+  text-decoration: none;
+}
+
 .hide {
   display: none !important;
 }
