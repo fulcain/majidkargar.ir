@@ -1,6 +1,6 @@
 // font-face
 @font-face {
-	font-family: comicJasem;
+	font-family: comic;
 	src: url(/assets/fonts/comic.ttf);
 }
 @import "variables";
@@ -13,11 +13,13 @@
 * {
 	scroll-behavior: smooth;
 	box-sizing: border-box;
-	font-family: comicJasem, cursive, Impact;
+	font-family: comic, cursive, Impact;
 }
+
 a {
 	text-decoration: none;
 }
+
 .hide {
 	display: none !important;
 }
@@ -25,11 +27,13 @@ a {
 body {
 	background-color: var(--secondary-color);
 }
+
 .container {
 	width: 90vw;
 	max-width: 1400px;
 	margin: 0 auto;
 }
+
 section {
 	background-color: var(--primary-color);
 	padding: 40px;

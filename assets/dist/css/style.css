@@ -1,5 +1,5 @@
 @font-face {
-  font-family: comicJasem;
+  font-family: comic;
   src: url(/assets/fonts/comic.ttf);
 }
 :root {
@@ -362,7 +362,7 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: comicJasem, cursive, Impact;
+  font-family: comic, cursive, Impact;
 }
 
 a {
