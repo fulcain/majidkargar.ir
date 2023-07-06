@@ -6,14 +6,8 @@ const projectDetails = [
         projectRepoLink: "https://github.com/fulcain/Personal"
     },
     {
-        projectName: "Nasa",
-        projectImageAddress: "assets/images/nasa.webp",
-        projectLiveLink: "https://fulcain.github.io/Nasa/",
-        projectRepoLink: "https://github.com/fulcain/Nasa"
-    },
-    {
         projectName: "Apollox",
-        projectImageAddress: "assets/images/apollox.webp",
+        projectImageAddress: "assets/images/apollox.png",
         projectLiveLink: "https://dofxo.github.io/apollox/",
         projectRepoLink: "https://github.com/dofxo/apollox"
     },
