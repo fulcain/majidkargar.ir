@@ -1,7 +1,8 @@
 // project section START ---
 #myprojects {
 	background-color: var(--secondary-color);
-	#wholeProjectBox {
+	.project-wrapper {
+		margin-bottom: 50px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -50,6 +51,11 @@
 					color: var(--primary-color);
 					background-color: var(--font-color);
 				}
+			}
+		}
+		&#special-projects {
+			.projects-box {
+				min-width: 550px;
 			}
 		}
 	}

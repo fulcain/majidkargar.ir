@@ -19,22 +19,30 @@ function init() {
 function renderProjects() {
 	// for loop to render all projects
 	for (let i = 0; i < projectDetails.length; i++) {
-		projectTemplate(
-			projectDetails[i].projectName,
-			projectDetails[i].projectImageAddress,
-			projectDetails[i].projectRepoLink,
-			projectDetails[i].projectLiveLink
-		);
+		if (projectDetails[i].projectStatus === "normal")
+			projectTemplate(
+				projectDetails[i].projectName,
+				projectDetails[i].projectImageAddress,
+				projectDetails[i].projectRepoLink,
+				projectDetails[i].projectLiveLink,
+				"#wholeProjectBox"
+			);
+		else {
+			projectTemplate(
+				projectDetails[i].projectName,
+				projectDetails[i].projectImageAddress,
+				projectDetails[i].projectRepoLink,
+				projectDetails[i].projectLiveLink,
+				"#special-projects"
+			);
+		}
 	}
 }
 
 // TITLE: render contactMe
 function renderContactMe() {
 	for (let i = 0; i < contactMeLinks.length; i++) {
-		contactMeLiTemplate(
-			contactMeLinks[i].image,
-			contactMeLinks[i].link
-		);
+		contactMeLiTemplate(contactMeLinks[i].image, contactMeLinks[i].link);
 	}
 }
 

@@ -313,7 +313,8 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
 #myprojects {
   background-color: var(--secondary-color);
 }
-#myprojects #wholeProjectBox {
+#myprojects .project-wrapper {
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -321,14 +322,14 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
   flex-wrap: wrap;
   gap: 20px;
 }
-#myprojects #wholeProjectBox .projects-box {
+#myprojects .project-wrapper .projects-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px 10px;
   max-width: 400px;
 }
-#myprojects #wholeProjectBox .projects-box img {
+#myprojects .project-wrapper .projects-box img {
   overflow: hidden;
   max-width: 100%;
   height: auto;
@@ -337,12 +338,12 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
   transition-duration: 0.1s;
   transition-timing-function: linear;
 }
-#myprojects #wholeProjectBox .projects-box .project-title {
+#myprojects .project-wrapper .projects-box .project-title {
   font-size: var(--project-title-fontSize);
   color: var(--font-color);
   text-align: center;
 }
-#myprojects #wholeProjectBox .projects-box .project-link {
+#myprojects .project-wrapper .projects-box .project-link {
   color: var(--font-color);
   background-color: var(--primary-color);
   padding: 10px 20px;
@@ -355,9 +356,12 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
   font-size: var(--github-link-font-size);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11), 0 8px 16px rgba(0, 0, 0, 0.11);
 }
-#myprojects #wholeProjectBox .projects-box .project-link:hover {
+#myprojects .project-wrapper .projects-box .project-link:hover {
   color: var(--primary-color);
   background-color: var(--font-color);
+}
+#myprojects .project-wrapper#special-projects .projects-box {
+  min-width: 550px;
 }
 
 * {
