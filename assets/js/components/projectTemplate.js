@@ -4,9 +4,9 @@
 // projectName is the name of the project
 // projectLiveLink is the github link to the live project
 // projectRepoLink is the github link to the project
-function projectTemplate(projectName, projectImage, projectRepoLink, projectLiveLink,) {
+function projectTemplate(projectName, projectImage, projectRepoLink, projectLiveLink,projectWrapper) {
     // grabs the my projects box
-    let wholeProjectBox = document.querySelector('#wholeProjectBox');
+    let wholeProjectBox = document.querySelector(projectWrapper);
 
     // project box
     const projectBox = document.createElement("div")
