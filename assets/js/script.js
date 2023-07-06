@@ -19,23 +19,20 @@ function init() {
 function renderProjects() {
 	// for loop to render all projects
 	for (let i = 0; i < projectDetails.length; i++) {
-		if (projectDetails[i].projectStatus === "normal")
-			projectTemplate(
-				projectDetails[i].projectName,
-				projectDetails[i].projectImageAddress,
-				projectDetails[i].projectRepoLink,
-				projectDetails[i].projectLiveLink,
-				"#wholeProjectBox"
-			);
-		else {
-			projectTemplate(
-				projectDetails[i].projectName,
-				projectDetails[i].projectImageAddress,
-				projectDetails[i].projectRepoLink,
-				projectDetails[i].projectLiveLink,
-				"#special-projects"
-			);
-		}
+		// Set the projects wrapper based on project status
+		const wrapper =
+			projectDetails[i].projectStatus === "normal"
+				? "#wholeProjectBox"
+				: "#special-projects";
+
+		// Call projectTemplate to create projects
+		projectTemplate(
+			projectDetails[i].projectName,
+			projectDetails[i].projectImageAddress,
+			projectDetails[i].projectRepoLink,
+			projectDetails[i].projectLiveLink,
+			wrapper
+		);
 	}
 }
 
