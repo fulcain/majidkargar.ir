@@ -1,8 +1,8 @@
 
 // header
 header {
-	background-color: var(--secondary-color);
-	box-shadow: 0 0 20px var(--secondary-color);
+	background-color: var(--primary-color);
+	box-shadow: 0 0 20px var(--primary-color);
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -35,7 +35,7 @@ header {
 				border-radius: var(--border-radius);
 				padding: 15px 20px;
 				&:hover {
-					background-color: var(--primary-color);
+					background-color: var(--secondary-color);
 				}
 			}
 			a {
