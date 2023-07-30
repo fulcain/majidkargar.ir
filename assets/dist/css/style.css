@@ -142,7 +142,7 @@ header #nav-icon span {
   position: absolute;
   height: 3px;
   width: 15px;
-  background: var(--primary-color);
+  background: var(--secondary-color);
   border-radius: var(--border-radius);
   opacity: 1;
   left: 0;
@@ -459,6 +459,12 @@ section {
     width: 52px;
     height: 52px;
   }
+  #myprojects .project-wrapper .projects-box img {
+    min-height: unset;
+  }
+  #myprojects .project-wrapper#special-projects .projects-box {
+    min-width: 430px;
+  }
 }
 /* width lesser than 500 */
 @media screen and (max-width: 550px) {
@@ -482,6 +488,9 @@ section {
   }
   #heroSection #heroSection-biography #contactMe-ul li {
     padding: 5px;
+  }
+  #myprojects .project-wrapper#special-projects .projects-box {
+    min-width: unset;
   }
 }
 @media screen and (max-width: 320px) {

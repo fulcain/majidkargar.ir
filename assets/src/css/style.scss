@@ -107,6 +107,22 @@ section {
 		width: 52px;
 		height: 52px;
 	}
+
+	#myprojects {
+		.project-wrapper {
+			// project box
+			.projects-box {
+				img {
+					min-height: unset;
+				}
+			}
+			&#special-projects {
+				.projects-box {
+					min-width: 430px;
+				}
+			}
+		}
+	}
 }
 
 /* width lesser than 500 */
@@ -134,6 +150,16 @@ section {
 				}
 				li {
 					padding: 5px;
+				}
+			}
+		}
+	}
+	#myprojects {
+		.project-wrapper {
+			// project box
+			&#special-projects {
+				.projects-box {
+					min-width: unset;
 				}
 			}
 		}
