@@ -333,6 +333,8 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
 }
 #myprojects .project-wrapper .projects-box img {
   overflow: hidden;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius);
   max-width: 100%;
   height: auto;
   min-height: 210px;
