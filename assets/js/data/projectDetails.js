@@ -56,6 +56,13 @@ const projectDetails = [
 		projectStatus: "normal",
 	},
 	{
+		projectName: "Memory Game (React)",
+		projectImageAddress: "assets/images/memory-game.png",
+		projectLiveLink: "https://fulcain.github.io/memory-game/",
+		projectRepoLink: "https://github.com/fulcain/memory-game",
+		projectStatus: "normal",
+	},
+	{
 		projectName: "SilverBox",
 		projectImageAddress: "assets/images/silverBox.png",
 		projectLiveLink: "https://silverBoxjs.ir",
