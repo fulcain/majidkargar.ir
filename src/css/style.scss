@@ -3,12 +3,12 @@
 	font-family: comic;
 	src: url(/assets/fonts/comic.ttf);
 }
-@import "variables";
-@import "./components/loader";
-@import "./components/header";
-@import "./components/heroSection";
-@import "./components/myProjectsSection";
-@import "./components//mySkills.scss";
+@import "./helpers/variables.scss";
+@import "./components/loader.scss";
+@import "./components/header.scss";
+@import "./components/heroSection.scss";
+@import "./components/myProjectsSection.scss";
+@import "./components/mySkills.scss";
 
 // general START ---
 * {
