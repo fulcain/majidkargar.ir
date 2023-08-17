@@ -390,7 +390,7 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
   border-radius: 100%;
 }
 #my-skills-box .my-skills-circle > * {
-  z-index: 2;
+  z-index: 1;
 }
 #my-skills-box .my-skills-circle .my-skills-inner-circle {
   background-color: var(--secondary-color);

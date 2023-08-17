@@ -11,7 +11,7 @@
 	.my-skills-circle {
 		// Position child elements on top
 		& > * {
-			z-index: 2;
+			z-index: 1;
 		}
 
 		// Position and style
