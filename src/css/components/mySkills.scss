@@ -53,8 +53,8 @@
 		}
 
 		// Shape, size
-		min-width: 250px;
-		min-height: 250px;
+		min-width: 150px;
+		min-height: 150px;
 		border: 1px solid var(--secondary-color);
 		border-radius: 100%;
 
@@ -62,44 +62,6 @@
 		.my-skills-title {
 			color: var(--font-color);
 			font-size: var(--mySkills-title-font-size);
-		}
-
-		// Progress bar
-		.my-skills-progressBar-wrapper {
-			// Position & style
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			gap: 5px;
-
-			// Progress bar value
-			.my-skills-progressBar-value {
-				align-self: end;
-				color: var(--font-color);
-			}
-
-			// outer progress bar
-			.my-skills-outer-progressBar {
-				// Style & shape
-				padding-block: 2px;
-				min-width: 200px;
-				height: 10px;
-				border: 1px solid var(--secondary-color);
-				border-radius: 10px;
-
-				// Position
-				display: flex;
-				justify-content: flex-start;
-				align-items: center;
-
-				// inner progress bar
-				.my-skills-inner-progressBar {
-					background-color: var(--secondary-color);
-					height: 10px;
-					border-radius: 10px;
-				}
-			}
 		}
 	}
 }
