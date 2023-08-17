@@ -13,6 +13,7 @@
   --header-icon-logo-size: 50px;
   --header-icon-themeIcon-size: 40px;
   --border-radius: 7px;
+  --mySkills-title-font-size:25px;
 }
 
 html[data-theme=dark] {
@@ -367,6 +368,79 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
   min-width: 550px;
 }
 
+#my-skills-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#my-skills-box .my-skills-circle {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+  min-width: 250px;
+  min-height: 250px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 100%;
+}
+#my-skills-box .my-skills-circle > * {
+  z-index: 2;
+}
+#my-skills-box .my-skills-circle .my-skills-inner-circle {
+  background-color: var(--secondary-color);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  opacity: 0;
+  scale: 0.3;
+  transition: 0.2s;
+  z-index: 0;
+}
+#my-skills-box .my-skills-circle:hover .my-skills-inner-circle {
+  opacity: 0.2;
+  scale: 1;
+}
+#my-skills-box .my-skills-circle:active .my-skills-inner-circle {
+  scale: 0.7;
+}
+#my-skills-box .my-skills-circle .my-skills-title {
+  color: var(--font-color);
+  font-size: var(--mySkills-title-font-size);
+}
+#my-skills-box .my-skills-circle .my-skills-progressBar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+#my-skills-box .my-skills-circle .my-skills-progressBar-wrapper .my-skills-progressBar-value {
+  align-self: end;
+  color: var(--font-color);
+}
+#my-skills-box .my-skills-circle .my-skills-progressBar-wrapper .my-skills-outer-progressBar {
+  padding-block: 2px;
+  min-width: 200px;
+  height: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#my-skills-box .my-skills-circle .my-skills-progressBar-wrapper .my-skills-outer-progressBar .my-skills-inner-progressBar {
+  background-color: var(--secondary-color);
+  height: 10px;
+  border-radius: 10px;
+}
+
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -471,7 +545,8 @@ section {
 /* width lesser than 500 */
 @media screen and (max-width: 550px) {
   #myprojects .container,
-  #whoami .container {
+  #whoami .container,
+  #myskills .container {
     width: 70vw;
   }
   :root {
@@ -484,6 +559,7 @@ section {
     --contactMe-font-size: 14px;
     --header-icon-logo-size: 30px;
     --header-icon-themeIcon-size: 25px;
+    --mySkills-title-font-size: 18px;
   }
   #heroSection #heroSection-biography #contactMe-ul img {
     width: 20px;
@@ -493,6 +569,20 @@ section {
   }
   #myprojects .project-wrapper#special-projects .projects-box {
     min-width: unset;
+  }
+  #my-skills-box {
+    flex-direction: row;
+  }
+  #my-skills-box .my-skills-circle {
+    min-width: 150px;
+    min-height: 150px;
+  }
+  #my-skills-box .my-skills-circle .my-skills-title {
+    color: var(--font-color);
+    font-size: var(--mySkills-title-font-size);
+  }
+  #my-skills-box .my-skills-circle .my-skills-progressBar-wrapper .my-skills-outer-progressBar {
+    min-width: 80px;
   }
 }
 @media screen and (max-width: 320px) {

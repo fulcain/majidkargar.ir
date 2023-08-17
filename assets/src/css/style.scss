@@ -8,6 +8,7 @@
 @import "./components/header";
 @import "./components/heroSection";
 @import "./components/myProjectsSection";
+@import "./components//mySkills.scss";
 
 // general START ---
 * {
@@ -128,7 +129,8 @@ section {
 /* width lesser than 500 */
 @media screen and (max-width: 550px) {
 	#myprojects .container,
-	#whoami .container {
+	#whoami .container,
+	#myskills .container {
 		width: 70vw;
 	}
 	:root {
@@ -141,7 +143,9 @@ section {
 		--contactMe-font-size: 14px;
 		--header-icon-logo-size: 30px;
 		--header-icon-themeIcon-size: 25px;
+		--mySkills-title-font-size: 18px;
 	}
+
 	#heroSection {
 		#heroSection-biography {
 			#contactMe-ul {
@@ -154,12 +158,36 @@ section {
 			}
 		}
 	}
+
 	#myprojects {
 		.project-wrapper {
 			// project box
 			&#special-projects {
 				.projects-box {
 					min-width: unset;
+				}
+			}
+		}
+	}
+	#my-skills-box {
+		flex-direction: row;
+
+		// Each Circle
+		.my-skills-circle {
+			min-width: 150px;
+			min-height: 150px;
+
+			// Title
+			.my-skills-title {
+				color: var(--font-color);
+				font-size: var(--mySkills-title-font-size);
+			}
+
+			// Progress bar
+			.my-skills-progressBar-wrapper {
+				// outer progress bar
+				.my-skills-outer-progressBar {
+					min-width: 80px;
 				}
 			}
 		}

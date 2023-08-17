@@ -1,0 +1,94 @@
+#my-skills-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	// Each Circle
+	.my-skills-circle {
+		& > * {
+			z-index: 2;
+		}
+
+		cursor: pointer;
+		user-select: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 50px;
+		position: relative;
+
+		.my-skills-inner-circle {
+			background-color: var(--secondary-color);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+			opacity: 0;
+			scale: 0.3;
+			transition: 0.2s;
+			z-index: 0;
+		}
+
+		&:hover {
+			.my-skills-inner-circle {
+				opacity: 0.2;
+				scale: 1;
+			}
+		}
+
+		&:active {
+			.my-skills-inner-circle {
+				scale: 0.7;
+			}
+		}
+
+		min-width: 250px;
+		min-height: 250px;
+		border: 1px solid var(--secondary-color);
+		border-radius: 100%;
+
+		// Title
+		.my-skills-title {
+			color: var(--font-color);
+			font-size: var(--mySkills-title-font-size);
+		}
+
+		// Progress bar
+		.my-skills-progressBar-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 5px;
+
+			// Progress bar value
+			.my-skills-progressBar-value {
+				align-self: end;
+				color: var(--font-color);
+			}
+
+			// outer progress bar
+			.my-skills-outer-progressBar {
+				padding-block: 2px;
+				min-width: 200px;
+				height: 10px;
+				border: 1px solid var(--secondary-color);
+				border-radius: 10px;
+
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+
+				// inner progress bar
+				.my-skills-inner-progressBar {
+					background-color: var(--secondary-color);
+					height: 10px;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}

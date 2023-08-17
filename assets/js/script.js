@@ -4,6 +4,8 @@ import contactMeLinks from "./data/contactMeLinks.js";
 import contactMeLiTemplate from "./components/contactMeTemplate.js";
 import projectTemplate from "./components/projectTemplate.js";
 import hamburgerMenu from "./components/hamburgerMenu.js";
+import mySkillsComponent from "./components/skillsComponent.js";
+import skills from "./data/skills.js";
 
 // events
 document.addEventListener("DOMContentLoaded", init);
@@ -11,6 +13,7 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
 	hamburgerMenu();
 	pageLoader();
+	renderMySkills();
 	renderProjects();
 	renderContactMe();
 }
@@ -42,6 +45,21 @@ function renderContactMe() {
 		contactMeLiTemplate(contactMeLinks[i].image, contactMeLinks[i].link);
 	}
 }
+
+const renderMySkills = () => {
+	const skillsWrapper = document.querySelector("#my-skills-box");
+
+	skills.map((skill) => {
+		skillsWrapper.append(
+			mySkillsComponent({
+				title: skill.title,
+				percentage: skill.percentage,
+				brandColor: skill.branColor,
+				link: skill.link,
+			})
+		);
+	});
+};
 
 // TITLE: page loader
 function pageLoader() {
