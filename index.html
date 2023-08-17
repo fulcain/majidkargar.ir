@@ -2,21 +2,16 @@
 <html lang="en" data-theme="dark">
 	<head>
 		<!-- icon -->
-		<link rel="icon" href="assets/images/trans.png" />
+		<link rel="icon" href="public/assets/images/trans.png" />
 
 		<!-- style sheet links -->
-		<link rel="stylesheet" href="assets/dist/css/css reset.css" />
-		<link rel="stylesheet" href="assets/dist/css/style.css" />
+		<link rel="stylesheet" href="/dist/css/css reset.css" />
+		<link rel="stylesheet" href="/dist/css/style.css" />
 
 		<!-- fonts -->
-		<link rel="stylesheet" href="assets/fonts/comic.ttf" />
-		<!-- box icons -->
-		<link
-			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-			rel="stylesheet"
-		/>
+		<link rel="stylesheet" href="public/assets/fonts/comic.ttf" />
 		<!-- js link -->
-		<script defer type="module" src="assets/js/script.js?v=1402"></script>
+		<script defer type="module" src="src/js/script.js?v=1402"></script>
 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,13 +26,16 @@
 				<div class="container">
 					<!-- header container  -->
 					<div class="header-logo">
-						<img src="assets/images/trans.png" alt="" />
+						<img src="public/assets/images/trans.png" alt="" />
 					</div>
 					<!-- normal navbar -->
 					<nav id="normal-nav">
 						<ul>
 							<a href="#whoami">
 								<li>Who Am I</li>
+							</a>
+							<a href="#myskills">
+								<li>My Skills</li>
 							</a>
 							<a href="#myprojects">
 								<li>My Projects</li>
@@ -60,6 +58,9 @@
 								<a href="#whoami">
 									<li>Who Am I</li>
 								</a>
+								<a href="#myskills">
+									<li>My Skills</li>
+								</a>
 								<a href="#myprojects">
 									<li>My Projects</li>
 								</a>
@@ -81,34 +82,46 @@
 					<div id="heroSection">
 						<div id="heroSection-image-overlay">
 							<img
-								src="assets/images/fulcain-no-bg.webp"
+								src="public/assets/images/fulcain-no-bg.webp"
 								alt="fulcain"
 							/>
 						</div>
 						<div id="heroSection-biography">
 							<p id="biography">
 								My name is
-								<span class="special-styles">Majid Kargar</span> and
-								I am a
+								<span class="special-styles">Majid Kargar</span>
+								and I am a
 								<span class="special-styles">Front-End</span>
 								developer based in Iran. I've been learning and
-								honing my skills in this field since last year. With
-								a good understanding in
+								honing my skills in this field since last year.
+								With a good understanding in
 								<span class="special-styles">HTML</span>,
 								<span class="special-styles">CSS</span>, and
-								<span class="special-styles">JavaScript</span>, I
-								strive to create visually appealing and
-								user-friendly websites that provide an optimal user
-								experience.
+								<span class="special-styles">JavaScript</span>,
+								I strive to create visually appealing and
+								user-friendly websites that provide an optimal
+								user experience.
 							</p>
-							<ul id="contactMe-ul">
-
-							</ul>
+							<ul id="contactMe-ul"></ul>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- who am i END-->
+
+			<!-- Skills START -->
+			<section id="myskills">
+				<!-- my Skills container -->
+				<div class="container">
+					<div class="titles">
+						<span class="titles">My Skills</span>
+					</div>
+
+					<!-- My skills wrapper -->
+					<div id="my-skills-box"></div>
+				</div>
+			</section>
+			<!-- Skills END -->
 
 			<!-- my projects START -->
 			<section id="myprojects">

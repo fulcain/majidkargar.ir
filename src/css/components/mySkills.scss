@@ -1,0 +1,105 @@
+// Box to hold skills circles
+#my-skills-box {
+	// Align and space circles
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	// Style each circle
+	.my-skills-circle {
+		// Position child elements on top
+		& > * {
+			z-index: 1;
+		}
+
+		// Position and style
+		cursor: pointer;
+		user-select: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 50px;
+		position: relative;
+
+		// Inner circle behind content
+		.my-skills-inner-circle {
+			background-color: var(--secondary-color);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+			opacity: 0;
+			scale: 0.3;
+			transition: 0.2s;
+			z-index: 0;
+		}
+
+		// Hover State
+		&:hover {
+			.my-skills-inner-circle {
+				opacity: 0.2;
+				scale: 1;
+			}
+		}
+
+		// Active State
+		&:active {
+			.my-skills-inner-circle {
+				scale: 0.7;
+			}
+		}
+
+		// Shape, size
+		min-width: 250px;
+		min-height: 250px;
+		border: 1px solid var(--secondary-color);
+		border-radius: 100%;
+
+		// Title
+		.my-skills-title {
+			color: var(--font-color);
+			font-size: var(--mySkills-title-font-size);
+		}
+
+		// Progress bar
+		.my-skills-progressBar-wrapper {
+			// Position & style
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 5px;
+
+			// Progress bar value
+			.my-skills-progressBar-value {
+				align-self: end;
+				color: var(--font-color);
+			}
+
+			// outer progress bar
+			.my-skills-outer-progressBar {
+				// Style & shape
+				padding-block: 2px;
+				min-width: 200px;
+				height: 10px;
+				border: 1px solid var(--secondary-color);
+				border-radius: 10px;
+
+				// Position
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+
+				// inner progress bar
+				.my-skills-inner-progressBar {
+					background-color: var(--secondary-color);
+					height: 10px;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}
