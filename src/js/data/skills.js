@@ -27,18 +27,18 @@ const skills = [
 	{
 		title: "JavaScript",
 		branColor: "#F0DB4F",
-		link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+		link: "https://javascript.info/intro?map",
 	},
-	{
-		title: "TypeScript",
-		branColor: "#007ACC",
-		link: "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
-	},
-	{
-		title: "React",
-		branColor: "#61DAFB",
-		link: "https://react.dev/",
-	},
+	// {
+	// 	title: "TypeScript",
+	// 	branColor: "#007ACC",
+	// 	link: "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
+	// },
+	// {
+	// 	title: "React",
+	// 	branColor: "#61DAFB",
+	// 	link: "https://react.dev/",
+	// },
 ];
 
 export default skills;
