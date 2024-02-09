@@ -1,90 +1,96 @@
 // hero section
 #heroSection {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	// image overlay
-	#heroSection-image-overlay {
-		display: flex;
-		justify-content: center;
-		align-items: flex-end;
-		border-radius: 100%;
-		width: var(--heroSection-image-div-size);
-		height: var(--heroSection-image-div-size);
-		overflow: hidden;
-		border: 5px solid var(--hero-border-color);
-		background-color: var(--primary-color);
-		box-shadow: 3px 5px 1px rgba(0, 0, 0, 0.11),
-			0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11),
-			0 6px 8px rgba(0, 0, 0, 0.11), 0 8px 16px rgba(0, 0, 0, 0.11);
-		position: relative;
-		img {
-			max-width: 100%;
-			height: auto;
-			padding-left: 10px;
-		}
-	}
-	#heroSection-biography {
-		width: 40%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		gap: 40px 0;
-		#biography {
-			color: var(--font-color);
-			line-height: 35px;
-			font-size: var(--biography-font-size);
-			text-align: justify;
-			.special-styles {
-				font-weight: bolder;
-			}
-		}
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
-		// contact me
-		#contactMe-ul {
-			img {
-				width: 30px;
-				z-index: 1;
-			}
-			display: flex;
-			flex-direction: row;
-			gap: 10px;
-			justify-content: center;
-			li {
-				cursor: pointer;
-				width: max-content;
-				background-color: var(--primary-color);
-				border-radius: 50px;
-				border: 3px solid var(--secondary-color);
-				padding: 10px;
-				transition: 0.2s linear;
-				position: relative;
-				overflow: hidden;
-				a {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					color: var(--font-color);
-				}
-				&::after{
-					content:'';
-					background-color:#484c69;
-					width: 100px;
-					height: 10px;
-					top: 20px;
-					left: -80px;
-					transform: rotate(45deg);
-					position: absolute;
-					transition: .2s linear;
-				}
-				&:hover{
-					background-color: var(--footer-icon-hover);
-				}
-				&:hover::after {
-					left: 50px;
-				}
-			}
-		}
-	}
+    // image overlay
+    #heroSection-image-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-radius: 50%;
+        width: var(--heroSection-image-div-size);
+        height: var(--heroSection-image-div-size);
+        overflow: hidden;
+        border: 5px solid var(--hero-border-color);
+        background-color: var(--primary-color);
+        position: relative;
+        img {
+            width: 100%;
+            border-radius: 50%;
+            height: auto;
+        }
+    }
+
+    #heroSection-biography {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px 0;
+
+        #biography {
+            color: var(--font-color);
+            line-height: 35px;
+            font-size: var(--biography-font-size);
+            text-align: justify;
+            .special-styles {
+                font-weight: bolder;
+            }
+        }
+
+        // contact me
+        #contactMe-ul {
+            img {
+                width: 30px;
+                z-index: 1;
+            }
+
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+
+            li {
+                cursor: pointer;
+                width: max-content;
+                background-color: var(--primary-color);
+                border-radius: 50px;
+                border: 3px solid var(--secondary-color);
+                padding: 10px;
+                transition: 0.2s linear;
+                position: relative;
+                overflow: hidden;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--font-color);
+                }
+
+                &::after {
+                    content: "";
+                    background-color: #484c69;
+                    width: 100px;
+                    height: 10px;
+                    top: 20px;
+                    left: -80px;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    transition: 0.2s linear;
+                }
+
+                &:hover {
+                    background-color: var(--footer-icon-hover);
+                }
+
+                &:hover::after {
+                    left: 50px;
+                }
+            }
+        }
+    }
 }

@@ -13,7 +13,7 @@
   --header-icon-logo-size: 50px;
   --header-icon-themeIcon-size: 40px;
   --border-radius: 7px;
-  --mySkills-title-font-size:25px;
+  --mySkills-title-font-size: 25px;
 }
 
 html[data-theme=dark] {
@@ -237,19 +237,18 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  border-radius: 100%;
+  border-radius: 50%;
   width: var(--heroSection-image-div-size);
   height: var(--heroSection-image-div-size);
   overflow: hidden;
   border: 5px solid var(--hero-border-color);
   background-color: var(--primary-color);
-  box-shadow: 3px 5px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11), 0 8px 16px rgba(0, 0, 0, 0.11);
   position: relative;
 }
 #heroSection #heroSection-image-overlay img {
-  max-width: 100%;
+  width: 100%;
+  border-radius: 50%;
   height: auto;
-  padding-left: 10px;
 }
 #heroSection #heroSection-biography {
   width: 40%;

@@ -1,24 +1,25 @@
 // variables START ---
 :root {
-	--title-fontSize: 35px;
-	--navbar-font-size: 18px;
-	--biography-font-size: 18px;
-	--project-title-fontSize: 20px;
-	--github-link-font-size: 18px;
-	--contactMe-font-size: 18px;
-	--heroSection-image-div-size: 400px;
-	--header-icon-logo-size: 50px;
-	--header-icon-themeIcon-size: 40px;
-	--border-radius: 7px;
-	--mySkills-title-font-size:25px;
+    --title-fontSize: 35px;
+    --navbar-font-size: 18px;
+    --biography-font-size: 18px;
+    --project-title-fontSize: 20px;
+    --github-link-font-size: 18px;
+    --contactMe-font-size: 18px;
+    --heroSection-image-div-size: 400px;
+    --header-icon-logo-size: 50px;
+    --header-icon-themeIcon-size: 40px;
+    --border-radius: 7px;
+    --mySkills-title-font-size: 25px;
 }
+
 html[data-theme="dark"] {
-	--primary-color: #282a36;
-	--secondary-color: #44475a;
-	--font-color: #f8f8f2;
-	--hero-border-color: #a9a9a9;
-	--footer-icon-hover: #44475a;
-	--project-links-hover: #5e60a0;
-	--project-link-color: #44475a;
+    --primary-color: #282a36;
+    --secondary-color: #44475a;
+    --font-color: #f8f8f2;
+    --hero-border-color: #a9a9a9;
+    --footer-icon-hover: #44475a;
+    --project-links-hover: #5e60a0;
+    --project-link-color: #44475a;
 }
 // variables END ---

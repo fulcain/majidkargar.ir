@@ -1,15 +1,18 @@
 {
-  "name": "fulcain.ir",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "sass": "sass --watch --no-source-map ./src/css/style.scss:./dist/css/style.css"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "sass": "^1.62.1"
-  }
+    "name": "fulcain.ir",
+    "version": "1.0.0",
+    "description": "",
+    "main": "/src/js/script.js",
+    "type": "module",
+    "scripts": {
+        "sass": "sass --watch --no-source-map ./src/css/style.scss:./dist/css/style.css",
+        "dev": "nodemon && npm run sass"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "nodemon": "^3.0.3",
+        "sass": "^1.62.1"
+    }
 }
