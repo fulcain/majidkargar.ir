@@ -236,6 +236,7 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
 #heroSection #heroSection-image-overlay {
   display: flex;
   justify-content: center;
+  gap: 5px;
   align-items: flex-end;
   border-radius: 50%;
   width: var(--heroSection-image-div-size);
@@ -251,23 +252,34 @@ header #hamburger-nav #hamburger-content .hamburger-list-wrapper li:hover {
   height: auto;
 }
 #heroSection #heroSection-biography {
-  width: 40%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 40px 0;
+  color: var(--font-color);
+}
+#heroSection #heroSection-biography #my-name {
+  font-size: 48px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 900px) {
+  #heroSection #heroSection-biography #my-name {
+    font-size: 38px;
+  }
 }
 #heroSection #heroSection-biography #biography {
-  color: var(--font-color);
-  line-height: 35px;
-  font-size: var(--biography-font-size);
-  text-align: justify;
+  font-size: 18px;
+  font-weight: 500;
+  text-wrap: wrap;
 }
-#heroSection #heroSection-biography #biography .special-styles {
-  font-weight: bolder;
+@media only screen and (max-width: 900px) {
+  #heroSection #heroSection-biography #biography {
+    font-size: 16px;
+  }
 }
 #heroSection #heroSection-biography #contactMe-ul {
+  align-self: center;
   display: flex;
   flex-direction: row;
   gap: 10px;
