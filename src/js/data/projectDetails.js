@@ -1,26 +1,5 @@
 const projectDetails = [
     {
-        projectName: "Personal",
-        projectImageAddress: "public/assets/images/personal.png",
-        projectLiveLink: "https://fulcain.github.io/Personal/",
-        projectRepoLink: "https://github.com/fulcain/Personal",
-        projectStatus: "normal",
-    },
-    {
-        projectName: "Apollox",
-        projectImageAddress: "public/assets/images/apollox.png",
-        projectLiveLink: "https://dofxo.github.io/apollox/",
-        projectRepoLink: "https://github.com/dofxo/apollox",
-        projectStatus: "normal",
-    },
-    {
-        projectName: "Sticky-note",
-        projectImageAddress: "public/assets/images/sticky-note.webp",
-        projectLiveLink: "https://fulcain.github.io/sticky-note/",
-        projectRepoLink: "https://github.com/fulcain/sticky-note",
-        projectStatus: "normal",
-    },
-    {
         projectName: "Calculator app",
         projectImageAddress: "public/assets/images/calculator.webp",
         projectLiveLink: "https://fulcain.github.io/calculator-app/",
@@ -46,13 +25,6 @@ const projectDetails = [
         projectImageAddress: "public/assets/images/car-insurance.png",
         projectLiveLink: "https://dofxo.github.io/car-insurance/",
         projectRepoLink: "https://github.com/dofxo/car-insurance",
-        projectStatus: "normal",
-    },
-    {
-        projectName: "API practice",
-        projectImageAddress: "public/assets/images/api-practice.png",
-        projectLiveLink: "https://fulcain.github.io/api-practice/",
-        projectRepoLink: "https://github.com/fulcain/api-practice",
         projectStatus: "normal",
     },
     {
