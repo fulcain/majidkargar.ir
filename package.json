@@ -2,7 +2,7 @@
     "name": "majidkargar.ir",
     "version": "1.0.0",
     "description": "",
-    "main": "/src/js/script.js",
+    "main": "src/js/script.js",
     "type": "module",
     "scripts": {
         "sass": "sass --watch --no-source-map ./src/css/style.scss:./dist/css/style.css",
