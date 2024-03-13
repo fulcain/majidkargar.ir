@@ -144,7 +144,6 @@ section {
 		--contactMe-font-size: 14px;
 		--header-icon-logo-size: 30px;
 		--header-icon-themeIcon-size: 25px;
-		--mySkills-title-font-size: 18px;
 	}
 
 	#heroSection {
@@ -166,26 +165,6 @@ section {
 			&#special-projects {
 				.projects-box {
 					min-width: unset;
-				}
-			}
-		}
-	}
-	#my-skills-box {
-		flex-direction: row;
-
-		// Each Circle
-		.my-skills-circle {
-			// Title
-			.my-skills-title {
-				color: var(--font-color);
-				font-size: var(--mySkills-title-font-size);
-			}
-
-			// Progress bar
-			.my-skills-progressBar-wrapper {
-				// outer progress bar
-				.my-skills-outer-progressBar {
-					min-width: 80px;
 				}
 			}
 		}
