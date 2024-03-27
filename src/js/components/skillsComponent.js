@@ -10,7 +10,7 @@
  */
 const mySkillsComponent = (config) => {
 	// Destructuring the props (config keys)
-	const { title, percentage, brandColor, link } = config;
+	const { title, brandColor, link } = config;
 
 	// Create anchor element for skills circle
 	const mySkillsCircle = document.createElement("a");
