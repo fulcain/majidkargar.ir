@@ -34,11 +34,11 @@ const skills = [
 	// 	branColor: "#007ACC",
 	// 	link: "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
 	// },
-	// {
-	// 	title: "React",
-	// 	branColor: "#61DAFB",
-	// 	link: "https://react.dev/",
-	// },
+	{
+		title: "React",
+		branColor: "#61DAFB",
+		link: "https://react.dev/",
+	},
 ];
 
 export default skills;
