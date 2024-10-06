@@ -1,80 +1,35 @@
-// Box to hold skills circles
 #my-skills-box {
-	// Align and space circles
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 
-	@media only screen and (max-width: 900px) {
-		flex-direction: row;
-	}
+  .skill-wrapper {
+    background: var(--primary);
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    gap: 4px;
+    transition: .2s;
+    min-height: 42px;
 
-	// Style each circle
-	.my-skills-circle {
-		// Position child elements on top
-		& > * {
-			z-index: 1;
-		}
+    &:hover {
+      background: var(--project-links-hover);
+    }
 
-		// Position and style
-		cursor: pointer;
-		user-select: none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		gap: 50px;
-		position: relative;
+    .skill-logo {
+      width: 25px;
+    }
 
-		// Inner circle behind content
-		.my-skills-inner-circle {
-			background-color: var(--secondary-color);
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			border-radius: 100%;
-			opacity: 0;
-			scale: 0.3;
-			transition: 0.2s;
-			z-index: 0;
-		}
+    .skill-name {
+      color: white;
 
-		// Hover State
-		&:hover {
-			.my-skills-inner-circle {
-				opacity: 0.2;
-				scale: 1;
-			}
-		}
-
-		// Active State
-		&:active {
-			.my-skills-inner-circle {
-				scale: 0.7;
-			}
-		}
-
-		// Shape, size
-		width: 150px;
-		height: 150px;
-		border: 1px solid var(--secondary-color);
-		border-radius: 100%;
-
-		@media only screen and (max-width: 900px) {
-			height: 100px;
-			width: 100px;
-		}
-
-		// Title
-		.my-skills-title {
-			color: var(--font-color);
-			font-size: 20px;
-
-			@media only screen and (max-width: 900px) {
-				font-size: 14px;
-			}
-		}
-	}
+    }
+  }
 }

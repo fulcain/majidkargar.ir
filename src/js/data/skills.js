@@ -1,48 +1,48 @@
 const skills = [
   {
     title: "HTML",
-    branColor: "#E34F26",
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    logo: "../../../public/assets/images/file-type-html.svg",
   },
   {
     title: "CSS",
-    branColor: "#1572B6",
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    logo: "../../../public/assets/images/file-type-css.svg",
   },
   {
     title: "Sass",
-    branColor: "#CC6699",
     link: "https://sass-lang.com/documentation/",
+    logo: "../../../public/assets/images/file-type-sass.svg",
   },
   {
     title: "Tailwind",
-    branColor: "#14B8A6",
     link: "https://tailwindcss.com/docs/installation",
+    logo: "../../../public/assets/images/tailwindcss-icon.svg",
   },
   {
     title: "Bootstrap",
-    branColor: "#7952B3",
     link: "https://getbootstrap.com/docs/4.1/getting-started/introduction/",
+    logo: "../../../public/assets/images/bootstrap.svg",
   },
   {
     title: "JavaScript",
-    branColor: "#F0DB4F",
     link: "https://javascript.info/intro?map",
+    logo: "../../../public/assets/images/javascript-js.svg",
   },
   {
     title: "TypeScript",
-    branColor: "#007ACC",
     link: "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
+    logo: "../../../public/assets/images/typescript-icon.svg",
   },
   {
     title: "React",
-    branColor: "#61DAFB",
     link: "https://react.dev/",
+    logo: "../../../public/assets/images/react.svg",
   },
   {
     title: "Material UI",
-    branColor: "#2196f3",
     link: "https://mui.com",
+    logo: "../../../public/assets/images/material-ui.svg",
   },
 ];
 

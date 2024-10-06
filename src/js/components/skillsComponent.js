@@ -9,52 +9,27 @@
  * @returns {HTMLElement} Skills component circle element
  */
 const mySkillsComponent = (config) => {
-	// Destructuring the props (config keys)
-	const { title, brandColor, link } = config;
+  // Destructuring the props (config keys)
+  const { title, link, logo } = config;
 
-	// Create anchor element for skills circle
-	const mySkillsCircle = document.createElement("a");
+  // Create anchor element for skills circle
+  const skillWrapper = document.createElement("a");
+  skillWrapper.classList.add("skill-wrapper");
+  skillWrapper.href = link;
+  skillWrapper.target = "_blank";
 
-	// Add class for styling
-	mySkillsCircle.classList.add("my-skills-circle");
+  const skillLogo = document.createElement("img");
+  skillLogo.classList.add("skill-logo");
+  skillLogo.src = logo;
 
-	// Set border color if brand color is provided
-	if (brandColor) mySkillsCircle.style.borderColor = brandColor;
+  const skillName = document.createElement("span");
+  skillName.classList.add("skill-name");
+  skillName.textContent = title;
 
-	// Set link target to open in new tab
-	mySkillsCircle.setAttribute("target", "_blank");
+  skillWrapper.append(skillLogo, skillName);
 
-	// Set link href if provided
-	if (link) mySkillsCircle.setAttribute("href", link || "#");
-
-	// Create div element for inner circle
-	const mySkillsInnerCircle = document.createElement("div");
-
-	// Add class for styling
-	mySkillsInnerCircle.classList.add("my-skills-inner-circle");
-
-	// Set background color if brand color is provided
-	if (brandColor) mySkillsInnerCircle.style.backgroundColor = brandColor;
-
-	// Create h4 element for title
-	const mySkillsTitle = document.createElement("h4");
-
-	// Add class for styling
-	mySkillsTitle.classList.add("my-skills-title");
-
-	mySkillsTitle.style.color = brandColor
-
-	// Set text content
-	mySkillsTitle.textContent = title || "No title provided";
-
-	// Append inner circle to skills circle
-	mySkillsCircle.append(mySkillsInnerCircle);
-
-	// Append title to skills circle
-	mySkillsCircle.append(mySkillsTitle);
-
-	// Return skills circle
-	return mySkillsCircle;
+  // Return skills circle
+  return skillWrapper;
 };
 
 export default mySkillsComponent;
