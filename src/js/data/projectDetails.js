@@ -48,7 +48,13 @@ const projectDetails = [
     projectRepoLink: "https://github.com/Silverethical/gym-trainer-website",
     projectStatus: "normal",
   },
-
+  {
+    projectName: "Niro Saee Derakhsh (client project)",
+    projectImageAddress: "public/assets/images/pdl.png",
+    projectLiveLink: "https://niro-saee.vercel.app/",
+    projectRepoLink: "https://niro-saee.vercel.app/",
+    projectStatus: "normal",
+  },
   {
     projectName: "SilverBox",
     projectImageAddress: "public/assets/images/silverBox.png",
