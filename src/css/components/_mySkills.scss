@@ -1,0 +1,35 @@
+#my-skills-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  .skill-wrapper {
+    background: var(--primary);
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    gap: 4px;
+    transition: .2s;
+    min-height: 42px;
+
+    &:hover {
+      background: var(--project-links-hover);
+    }
+
+    .skill-logo {
+      width: 25px;
+    }
+
+    .skill-name {
+      color: white;
+
+    }
+  }
+}

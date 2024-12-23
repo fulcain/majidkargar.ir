@@ -1,0 +1,195 @@
+// font-face
+@font-face {
+  font-family: comic;
+  src: url("../../public/assets/fonts/comic.ttf");
+}
+
+@import "./helpers/variables.scss";
+@import "./components/loader.scss";
+@import "./components/header.scss";
+@import "./components/heroSection.scss";
+@import "./components/myProjectsSection.scss";
+@import "./components/mySkills.scss";
+
+// general START ---
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: comic, cursive, Impact;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+body {
+  background-color: var(--secondary-color);
+}
+
+.container {
+  width: 90vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: var(--primary-color);
+  padding: 40px;
+  scroll-margin-top: 25px;
+  margin-top: 20px;
+}
+
+// titles
+.titles {
+  text-align: center;
+  color: var(--font-color);
+  font-size: var(--title-fontSize);
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+// general END ---
+
+/* responsive */
+
+/* width lesser than 768px*/
+@media screen and (max-width: 950px) {
+
+  /* project box img */
+  /* root */
+  :root {
+    --title-fontSize: 30px;
+    --navbar-font-size: 18px;
+    --biography-font-size: 16px;
+    --project-title-fontSize: 20px;
+    --heroSection-image-div-size: 300px;
+    --github-link-font-size: 18px;
+    --contactMe-font-size: 16px;
+    --header-icon-logo-size: 40px;
+  }
+
+  /* hero section */
+  #heroSection {
+    flex-direction: column;
+    gap: 70px;
+
+    #biography {
+      width: 80vw;
+    }
+  }
+
+  .container {
+    width: 90vw;
+  }
+
+  header {
+
+    /* nav bars */
+    /* normal nav bar */
+    #normal-nav {
+      display: none;
+    }
+
+    /* hamburger nav */
+    #hamburger-nav {
+      display: block;
+    }
+  }
+
+  /* whole projects box */
+  #wholeProjectBox {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px 0;
+  }
+
+  .loader {
+    width: 100px;
+    height: 100px;
+  }
+
+  .loader::after {
+    width: 52px;
+    height: 52px;
+  }
+
+  #myprojects {
+    .project-wrapper {
+
+      // project box
+      .projects-box {
+        img {
+          min-height: unset;
+        }
+      }
+
+      &#special-projects {
+        .projects-box {
+          min-width: 430px;
+        }
+      }
+    }
+  }
+}
+
+/* width lesser than 500 */
+@media screen and (max-width: 550px) {
+
+  #myprojects .container,
+  #whoami .container,
+  #myskills .container {
+    width: 70vw;
+  }
+
+  :root {
+    --title-fontSize: 22px;
+    --navbar-font-size: 14px;
+    --biography-font-size: 14px;
+    --project-title-fontSize: 16px;
+    --github-link-font-size: 14px;
+    --heroSection-image-div-size: 200px;
+    --contactMe-font-size: 14px;
+    --header-icon-logo-size: 30px;
+    --header-icon-themeIcon-size: 25px;
+  }
+
+  #heroSection {
+    #heroSection-biography {
+      #contactMe-ul {
+        img {
+          width: 20px;
+        }
+
+        li {
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+  #myprojects {
+    .project-wrapper {
+
+      // project box
+      &#special-projects {
+        .projects-box {
+          min-width: unset;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    --heroSection-image-div-size: 170px;
+  }
+}
