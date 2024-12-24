@@ -18,12 +18,15 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Mikhak", Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }
 
 .container {
   max-width: 1280px;
   width: 90vw;
   margin: 0 auto;
+}
 
-  min-height: 100vh;
+.separator-border {
+  @apply h-px bg-zinc-800 w-full;
 }
