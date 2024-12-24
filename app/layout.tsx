@@ -19,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa-IR" dir="rtl" className={mikhak.className}>
-      <body>{children}</body>
+      <body className="bg-black">
+        <div className="bg-gradient-to-br from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
