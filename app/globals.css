@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Mikhak", Open_Sans, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.separator-border {
+  @apply h-px bg-zinc-800 w-full;
+}
