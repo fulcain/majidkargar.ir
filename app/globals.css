@@ -17,7 +17,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Mikhak", Arial, Helvetica, sans-serif;
+  font-family: "Mikhak", Open_Sans, Helvetica, sans-serif;
   min-height: 100vh;
 }
 

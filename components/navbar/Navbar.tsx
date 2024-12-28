@@ -1,9 +1,9 @@
 "use client";
 import { links } from "@/constants/navigations";
 import Link from "next/link";
-import { useEffect } from "react";
-import { FaArrowLeft } from "react-icons/fa6";
-import RevealOnScroll from "./RevealOnScroll";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
+import RevealOnScroll from "../reavel-on-scroll/RevealOnScroll";
 
 const Navbar = () => {
   return (
@@ -22,7 +22,10 @@ const Navbar = () => {
             ))}
           </div>
           <Link href="/">
-            <FaArrowLeft className="text-xl text-palette-primary hover:text-palette-secondary transition" />
+            <ArrowBackIcon
+              sx={{ height: "24px", width: "24px" }}
+              className="text-xl text-palette-primary hover:text-palette-secondary transition"
+            />
           </Link>
         </div>
         {/* border bottom */}

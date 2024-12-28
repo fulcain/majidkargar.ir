@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="fa-IR" dir="rtl" className={mikhak.className}>
       <body className="bg-black">
-        <div className="bg-gradient-to-br from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+        <div className="h-[100vh] bg-gradient-to-br from-zinc-900/0 via-zinc-900 to-zinc-900/0">
           {children}
         </div>
       </body>
