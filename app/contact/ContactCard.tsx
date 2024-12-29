@@ -1,4 +1,4 @@
-import { Card } from "@/components/card/card";
+import { Card } from "@/components/card";
 import { ContactMeType } from "@/constants/contactMe";
 import { Exo_2 } from "next/font/google";
 import Link from "next/link";

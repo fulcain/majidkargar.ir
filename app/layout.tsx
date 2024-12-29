@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+
+import { Roboto } from "next/font/google";
 
 const mikhak = localFont({
   src: "../style/fonts/Mikhak-VF.ttf",
   display: "swap",
+});
+
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -19,12 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa-IR" dir="rtl" className={mikhak.className}>
-      <body className="bg-black">
-        <div className="h-[100vh] bg-gradient-to-br from-zinc-900/0 via-zinc-900 to-zinc-900/0">
-          {children}
-        </div>
-      </body>
+    <html
+      lang="fa-IR"
+      dir="rtl"
+      className={` ${mikhak.className} ${roboto.variable}`}
+    >
+      <body className="bg-black">{children}</body>
     </html>
   );
 }

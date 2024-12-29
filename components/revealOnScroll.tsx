@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
+export const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -31,5 +31,3 @@ const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
     </div>
   );
 };
-
-export default RevealOnScroll;

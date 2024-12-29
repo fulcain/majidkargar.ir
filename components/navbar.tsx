@@ -3,9 +3,9 @@ import { links } from "@/constants/navigations";
 import Link from "next/link";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-import RevealOnScroll from "../reavel-on-scroll/RevealOnScroll";
+import { RevealOnScroll } from "./revealOnScroll";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <>
       <nav className="fixed inset-x-0 p-5 backdrop-blur z-50 mb-52">
@@ -33,10 +33,6 @@ const Navbar = () => {
           <div className="absolute bottom-0 inset-x-0 separator-border" />
         </RevealOnScroll>
       </nav>
-      {/* extra space since the navbar is sticky to top */}
-      <div className="pb-20" />
     </>
   );
 };
-
-export default Navbar;
