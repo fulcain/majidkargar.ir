@@ -1,3 +1,4 @@
+import { Card } from "@/components/card/card";
 import { ContactMeType } from "@/constants/contactMe";
 import { Exo_2 } from "next/font/google";
 import Link from "next/link";
@@ -7,9 +8,10 @@ type ContactCardType = {
 };
 
 const exo_2 = Exo_2({ subsets: ["latin"], weight: "700" });
+
 const ContactCard = ({ item }: ContactCardType) => {
   return (
-    <div className="overflow-hidden grid items-center relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 ">
+    <Card>
       <Link
         href={item.href}
         target="_blank"
@@ -28,7 +30,7 @@ const ContactCard = ({ item }: ContactCardType) => {
         </span>
         <span className="absolute -z-[1] w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"></span>
       </Link>
-    </div>
+    </Card>
   );
 };
 
