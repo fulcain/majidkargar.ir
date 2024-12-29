@@ -2,7 +2,7 @@ import { Separator } from "@/components/seperator";
 import { Navbar } from "@/components/navbar";
 import { Title } from "./title";
 import { normalProjects, specialProjects } from "@/constants/projects";
-import { ProjectCard } from "./projectCard";
+import { ProjectCard } from "./project-card";
 
 const Projects = () => {
   return (

@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { contactMe } from "@/constants/contactMe";
-import ContactCard from "./contactCard";
+import ContactCard from "./contact-card";
 
 const Contact = () => {
   return (
