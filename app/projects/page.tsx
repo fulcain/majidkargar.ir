@@ -12,7 +12,7 @@ const Projects = () => {
         <div className="container">
           <Title
             title="پروژه ها"
-            subtitle="مجموعه از پروژه های تمرینی و نمونه کار های مربوط به کارفرما."
+            subtitle="مجموعه از پروژه های تمرینی و نمونه کار ها."
           />
           <Separator />
           <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
