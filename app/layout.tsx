@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Roboto } from "next/font/google";
 
@@ -68,7 +69,10 @@ export default function RootLayout({
       dir="rtl"
       className={` ${mikhak.className} ${roboto.variable}`}
     >
-      <body className="bg-black">{children}</body>
+      <body className="bg-black">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
