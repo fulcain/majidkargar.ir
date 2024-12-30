@@ -1,119 +1,31 @@
-import Navbar from "@/components/navbar/Navbar";
+import { Separator } from "@/components/seperator";
+import { Navbar } from "@/components/navbar";
+import { Title } from "./title";
+import { normalProjects, specialProjects } from "@/constants/projects";
+import { ProjectCard } from "./project-card";
 
 const Projects = () => {
   return (
     <>
       <Navbar />
-      <section className="">
+      <section className="mx-10 py-24">
         <div className="container">
-          <h2>Projects </h2>
-          <p>
-            Immutability Due to the nature of the animation, this component is
-            permanently memoized, which means that the component never
-            re-renders unless you hard-reload the page, and hence props changes
-            will not be reflected. Hot Reload NOT Supported Because the
-            TypeAnimation component is memoized and never re-rendered (see
-            above), yet Hot Reload attempts to re-render the component, changes
-            to the TypeAnimation component will not render until you hard-reload
-            the page. Hence, whenever you make changes to the TypeAnimation
-            component, you unfortunately have to reload your page.Immutability
-            Due to the nature of the animation, this component is permanently
-            memoized, which means that the component never re-renders unless you
-            hard-reload the page, and hence props changes will not be reflected.
-            Hot Reload NOT Supported Because the TypeAnimation component is
-            memoized and never re-rendered (see above), yet Hot Reload attempts
-            to re-render the component, changes to the TypeAnimation component
-            will not render until you hard-reload the page. Hence, whenever you
-            make changes to the TypeAnimation component, you unfortunately have
-            to reload your page.Immutability Due to the nature of the animation,
-            this component is permanently memoized, which means that the
-            component never re-renders unless you hard-reload the page, and
-            hence props changes will not be reflected. Hot Reload NOT Supported
-            Because the TypeAnimation component is memoized and never
-            re-rendered (see above), yet Hot Reload attempts to re-render the
-            component, changes to the TypeAnimation component will not render
-            until you hard-reload the page. Hence, whenever you make changes to
-            the TypeAnimation component, you unfortunately have to reload your
-            page.Immutability Due to the nature of the animation, this component
-            is permanently memoized, which means that the component never
-            re-renders unless you hard-reload the page, and hence props changes
-            will not be reflected. Hot Reload NOT Supported Because the
-            TypeAnimation component is memoized and never re-rendered (see
-            above), yet Hot Reload attempts to re-render the component, changes
-            to the TypeAnimation component will not render until you hard-reload
-            the page. Hence, whenever you make changes to the TypeAnimation
-            component, you unfortunately have to reload your page.Immutability
-            Due to the nature of the animation, this component is permanently
-            memoized, which means that the component never re-renders unless you
-            hard-reload the page, and hence props changes will not be reflected.
-            Hot Reload NOT Supported Because the TypeAnimation component is
-            memoized and never re-rendered (see above), yet Hot Reload attempts
-            to re-render the component, changes to the TypeAnimation component
-            will not render until you hard-reload the page. Hence, whenever you
-            make changes to the TypeAnimation component, you unfortunately have
-            to reload your page.Immutability Due to the nature of the animation,
-            this component is permanently memoized, which means that the
-            component never re-renders unless you hard-reload the page, and
-            hence props changes will not be reflected. Hot Reload NOT Supported
-            Because the TypeAnimation component is memoized and never
-            re-rendered (see above), yet Hot Reload attempts to re-render the
-            component, changes to the TypeAnimation component will not render
-            until you hard-reload the page. Hence, whenever you make changes to
-            the TypeAnimation component, you unfortunately have to reload your
-            page.Immutability Due to the nature of the animation, this component
-            is permanently memoized, which means that the component never
-            re-renders unless you hard-reload the page, and hence props changes
-            will not be reflected. Hot Reload NOT Supported Because the
-            TypeAnimation component is memoized and never re-rendered (see
-            above), yet Hot Reload attempts to re-render the component, changes
-            to the TypeAnimation component will not render until you hard-reload
-            the page. Hence, whenever you make changes to the TypeAnimation
-            component, you unfortunately have to reload your page.Immutability
-            Due to the nature of the animation, this component is permanently
-            memoized, which means that the component never re-renders unless you
-            hard-reload the page, and hence props changes will not be reflected.
-            Hot Reload NOT Supported Because the TypeAnimation component is
-            memoized and never re-rendered (see above), yet Hot Reload attempts
-            to re-render the component, changes to the TypeAnimation component
-            will not render until you hard-reload the page. Hence, whenever you
-            make changes to the TypeAnimation component, you unfortunately have
-            to reload your page.Immutability Due to the nature of the animation,
-            this component is permanently memoized, which means that the
-            component never re-renders unless you hard-reload the page, and
-            hence props changes will not be reflected. Hot Reload NOT Supported
-            Because the TypeAnimation component is memoized and never
-            re-rendered (see above), yet Hot Reload attempts to re-render the
-            component, changes to the TypeAnimation component will not render
-            until you hard-reload the page. Hence, whenever you make changes to
-            the TypeAnimation component, you unfortunately have to reload your
-            page. Immutability Due to the nature of the animation, this
-            component is permanently memoized, which means that the component
-            never re-renders unless you hard-reload the page, and hence props
-            changes will not be reflected. Hot Reload NOT Supported Because the
-            TypeAnimation component is memoized and never re-rendered (see
-            above), yet Hot Reload attempts to re-render the component, changes
-            to the TypeAnimation component will not render until you hard-reload
-            the page. Hence, whenever you make changes to the TypeAnimation
-            component, you unfortunately have to reload your page. Immutability
-            Due to the nature of the animation, this component is permanently
-            memoized, which means that the component never re-renders unless you
-            hard-reload the page, and hence props changes will not be reflected.
-            Hot Reload NOT Supported Because the TypeAnimation component is
-            memoized and never re-rendered (see above), yet Hot Reload attempts
-            to re-render the component, changes to the TypeAnimation component
-            will not render until you hard-reload the page. Hence, whenever you
-            make changes to the TypeAnimation component, you unfortunately have
-            to reload your page. Immutability Due to the nature of the
-            animation, this component is permanently memoized, which means that
-            the component never re-renders unless you hard-reload the page, and
-            hence props changes will not be reflected. Hot Reload NOT Supported
-            Because the TypeAnimation component is memoized and never
-            re-rendered (see above), yet Hot Reload attempts to re-render the
-            component, changes to the TypeAnimation component will not render
-            until you hard-reload the page. Hence, whenever you make changes to
-            the TypeAnimation component, you unfortunately have to reload your
-            page.
-          </p>
+          <Title
+            title="پروژه ها"
+            subtitle="مجموعه از پروژه های تمرینی و نمونه کار های مربوط به کارفرما."
+          />
+          <Separator />
+          <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
+            {specialProjects.map((project, idx) => (
+              <ProjectCard project={project} key={idx} />
+            ))}
+          </div>
+          <Separator />
+          <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
+            {normalProjects.map((project, idx) => (
+              <ProjectCard project={project} key={idx} />
+            ))}
+          </div>
         </div>
       </section>
     </>

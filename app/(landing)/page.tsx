@@ -1,10 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
-import fireflyParticles from "./FireflyParticles";
-import HomeNavigation from "./HomeNavigation";
+import HomeNavigation from "./homeNavigation";
 import localFont from "next/font/local";
-import { JackInTheBox, Bounce, Zoom } from "react-awesome-reveal";
+import { Bounce, Zoom } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
 
 const gAseman = localFont({
@@ -13,30 +11,28 @@ const gAseman = localFont({
 });
 
 export default function Home() {
-  useEffect(() => {
-    // fireflyParticles();
-  }, []);
-
   return (
-    <div className="container">
-      <section className="h-dvh flex items-center justify-center flex-col gap-8 md:gap-14">
-        <Bounce>
-          <HomeNavigation />
-        </Bounce>
-        <Zoom>
-          <h1 className={`${gAseman.className} text-[80px] md:text-[100px]`}>
-            مجید کارگر
-          </h1>
-        </Zoom>
-        <div className="flex flex-row gap-1 text-palette-primary">
-          <TypeAnimation
-            sequence={["برنامه نویس فرانت اند از پاییز ۱۴۰۲"]}
-            wrapper="span"
-            speed={50}
-            cursor={false}
-          />
-        </div>
-      </section>
+    <div className="h-[100vh] bg-gradient-to-br from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+      <div className="container">
+        <section className="h-dvh flex items-center justify-center flex-col gap-8 md:gap-14">
+          <Bounce>
+            <HomeNavigation />
+          </Bounce>
+          <Zoom>
+            <h1 className={`${gAseman.className} text-[80px] md:text-[100px]`}>
+              مجید کارگر
+            </h1>
+          </Zoom>
+          <div className="flex flex-row gap-1 text-palette-primary">
+            <TypeAnimation
+              sequence={["برنامه نویس فرانت اند از پاییز ۱۴۰۲"]}
+              wrapper="span"
+              speed={50}
+              cursor={false}
+            />
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
