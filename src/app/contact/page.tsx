@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/navbar";
-import { contactMe } from "@/constants/contactMe";
+import { Navbar } from "@/src/components/navbar";
+import { contactMe } from "@/src/constants/contactMe";
 import ContactCard from "./contact-card";
 
 const Contact = () => {

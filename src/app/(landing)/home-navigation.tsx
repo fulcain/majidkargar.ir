@@ -1,4 +1,4 @@
-import { links } from "@/constants/navigations";
+import { links } from "@/src/constants/navigations";
 import Link from "next/link";
 
 export const HomeNavigation = () => {

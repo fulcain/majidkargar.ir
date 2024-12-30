@@ -1,5 +1,5 @@
-import { Card } from "@/components/card";
-import { ContactMeType } from "@/constants/contactMe";
+import { Card } from "@/src/components/card";
+import { ContactMeType } from "@/src/constants/contactMe";
 import { Exo_2 } from "next/font/google";
 import Link from "next/link";
 

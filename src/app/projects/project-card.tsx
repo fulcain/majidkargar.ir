@@ -1,5 +1,5 @@
-import { Card } from "@/components/card";
-import { ProjectType } from "@/constants/projects";
+import { Card } from "@/src/components/card";
+import { ProjectType } from "@/src/constants/projects";
 import Link from "next/link";
 import { Exo_2 } from "next/font/google";
 

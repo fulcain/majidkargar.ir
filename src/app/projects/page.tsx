@@ -1,7 +1,7 @@
-import { Separator } from "@/components/seperator";
-import { Navbar } from "@/components/navbar";
+import { Separator } from "@/src/components/seperator";
+import { Navbar } from "@/src/components/navbar";
 import { Title } from "./title";
-import { normalProjects, specialProjects } from "@/constants/projects";
+import { normalProjects, specialProjects } from "@/src/constants/projects";
 import { ProjectCard } from "./project-card";
 
 const Projects = () => {

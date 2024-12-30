@@ -1,5 +1,5 @@
 "use client";
-import { links } from "@/constants/navigations";
+import { links } from "@/src/constants/navigations";
 import Link from "next/link";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 

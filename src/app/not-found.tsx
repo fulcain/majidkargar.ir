@@ -1,4 +1,4 @@
-import { Card } from "@/components/card";
+import { Card } from "@/src/components/card";
 import Link from "next/link";
 
 export default function NotFound() {
