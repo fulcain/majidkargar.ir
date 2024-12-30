@@ -1,7 +1,7 @@
 import { links } from "@/constants/navigations";
 import Link from "next/link";
 
-const HomeNavigation = () => {
+export const HomeNavigation = () => {
   return (
     <nav className="flex gap-2 flex-row items-center justify-center">
       {links.map((link, idx) => (
@@ -16,5 +16,3 @@ const HomeNavigation = () => {
     </nav>
   );
 };
-
-export default HomeNavigation;

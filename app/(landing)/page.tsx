@@ -1,6 +1,6 @@
 "use client";
 
-import HomeNavigation from "./homeNavigation";
+import { HomeNavigation } from "./home-navigation";
 import localFont from "next/font/local";
 import { Bounce, Zoom } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
