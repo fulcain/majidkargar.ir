@@ -42,7 +42,7 @@ export const normalProjects: ProjectType[] = [
     description: "یک پروژه تمرینی برای تمرین کردن state در ری اکت.",
   },
   {
-    projectName: "Invoker Trainer (React)",
+    projectName: "Invoker Trainer",
     projectLiveLink: "https://fulcain.github.io/invoker-trainer/",
     projectRepoLink: "https://github.com/fulcain/invoker-trainer",
     description: "یک پروژه تمرینی برای هیروی Invoker در بازی Dota2.",
