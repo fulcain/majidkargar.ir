@@ -1,10 +1,17 @@
 import { Separator } from "@/src/components/seperator";
 import { Navbar } from "@/src/components/navbar";
 import { Title } from "./title";
-import { normalProjects, specialProjects } from "@/src/constants/projects";
 import { ProjectCard } from "./project-card";
+import { projects } from "@/src/constants/projects";
 
 const Projects = () => {
+  const normalProjects = projects.filter(
+    (project) => project.projectType === "normal",
+  );
+  const specialProjects = projects.filter(
+    (project) => project.projectType === "special",
+  );
+
   return (
     <>
       <Navbar />
