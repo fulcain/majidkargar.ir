@@ -17,6 +17,8 @@ const icons = {
   ejs: "/icons/ejs.svg",
   radixui: "/icons/radixui.svg",
   lucide: "/icons/lucide.svg",
+  vercel: "/icons/vercel.svg",
+  framer: "/icons/framer.svg",
 };
 
 export type TechnologiesType = {
@@ -37,6 +39,27 @@ export type ProjectType = {
 };
 
 export const projects: ProjectType[] = [
+  {
+    projectName: "majidkargar.ir",
+    projectPath: "majidkargar.ir",
+    projectLiveLink: "https://majidkargar.ir",
+    projectRepoLink: "https://majidkargar.ir",
+    description: "پورتفولیو ای که الان دارید میبینید.",
+    projectType: "special",
+    isPrivate: true,
+    hasLiveLink: true,
+    technologies: [
+      { name: "TAILWIND", icon: icons.TailwindCSS },
+      { name: "TYPESCRIPT", icon: icons.TypeScript },
+      {
+        name: "NEXT",
+        icon: icons.NextJS,
+      },
+      { name: "MUI", icon: icons.MUI },
+      { name: "VERCEL", icon: icons.vercel },
+      { name: "FRAMER", icon: icons.framer },
+    ],
+  },
   {
     projectName: "Personal Trainer",
     projectPath: "personal-trainer",
