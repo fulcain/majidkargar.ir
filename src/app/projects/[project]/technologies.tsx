@@ -10,7 +10,6 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
   return (
     <div className="flex flex-wrap flex-row gap-2">
       {technologies.map((tech, idx) => (
-        // TODO: change style
         <div
           key={idx}
           className={`${exo_2.className} border border-zinc-800  max-w-[max-content] rounded p-2 flex flex-row align-center justify-center gap-2`}
