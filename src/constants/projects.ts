@@ -62,7 +62,7 @@ export const projects: ProjectType[] = [
     projectPath: "tonrow",
     projectLiveLink: "https://tonrow.ir",
     projectRepoLink: "https://tonrow.ir",
-    description: `پروژه ای مربوط به شرکت برنامه نویسی وبلاین که برای کارفا درست شد. هدف پروژه مدیریت مالی و سفارشات پیک موتوری هست که درون اپلیکیشن بحث های حسابدار و استفاده از مپ و ... مورد استفاده قرار گرفته شده.`,
+    description: `پروژه ای مربوط به شرکت برنامه نویسی وبلاین که برای کارفا درست شد. هدف پروژه مدیریت مالی و سفارشات پیک موتوری هست که درون اپلیکیشن بحث های حسابداری و استفاده از مپ و ... مورد استفاده قرار گرفته شده.`,
     projectType: "special",
     isPrivate: true,
     hasLiveLink: false,
