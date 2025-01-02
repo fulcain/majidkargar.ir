@@ -21,6 +21,7 @@ export const Navbar = () => {
               </Link>
             ))}
           </div>
+          {/* TODO: change to home icon */}
           <Link href="/">
             <ArrowBackIcon
               sx={{ height: "24px", width: "24px" }}
