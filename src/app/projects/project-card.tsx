@@ -1,13 +1,11 @@
 import { Card } from "@/src/components/card";
 import { ProjectType } from "@/src/constants/projects";
 import Link from "next/link";
-import { Exo_2 } from "next/font/google";
+import { exo_2 } from "@/src/constants/exo-font";
 
 type ProjectCardType = {
   project: ProjectType;
 };
-
-const exo_2 = Exo_2({ subsets: ["latin"], weight: "700" });
 
 export const ProjectCard = ({ project }: ProjectCardType) => {
   const { projectName, description, projectPath } = project;
