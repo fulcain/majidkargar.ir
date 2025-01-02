@@ -6,6 +6,7 @@ type TechnologiesProps = {
   technologies: TechnologiesType;
 };
 
+// TODO: change style of techs
 export const Technologies = ({ technologies }: TechnologiesProps) => {
   return (
     <div className="flex flex-wrap flex-row gap-2">

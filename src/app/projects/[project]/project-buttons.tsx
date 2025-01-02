@@ -25,7 +25,6 @@ export const ProjectButtons = ({
         </Link>
       )}
 
-      {/* // TODO: dont show karfama related */}
       {!isPrivate && (
         <Link
           className="border border-palette-primary p-2 rounded hover:bg-gray-800 transition"
