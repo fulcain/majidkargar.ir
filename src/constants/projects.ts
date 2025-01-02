@@ -43,10 +43,10 @@ export const projects: ProjectType[] = [
     projectName: "majidkargar.ir",
     projectPath: "majidkargar.ir",
     projectLiveLink: "https://majidkargar.ir",
-    projectRepoLink: "https://majidkargar.ir",
+    projectRepoLink: "https://github.com/fulcain/majidkargar.ir",
     description: "پورتفولیو ای که الان دارید میبینید.",
     projectType: "special",
-    isPrivate: true,
+    isPrivate: false,
     hasLiveLink: true,
     technologies: [
       { name: "TAILWIND", icon: icons.TailwindCSS },
