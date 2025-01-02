@@ -1,13 +1,11 @@
 import { Card } from "@/src/components/card";
 import { ContactMeType } from "@/src/constants/contactMe";
-import { Exo_2 } from "next/font/google";
+import { exo_2 } from "@/src/constants/exo-font";
 import Link from "next/link";
 
 type ContactCardType = {
   item: ContactMeType;
 };
-
-const exo_2 = Exo_2({ subsets: ["latin"], weight: "700" });
 
 const ContactCard = ({ item }: ContactCardType) => {
   return (
