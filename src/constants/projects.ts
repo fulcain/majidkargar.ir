@@ -19,6 +19,11 @@ const icons = {
   lucide: "/icons/lucide.svg",
 };
 
+export type TechnologiesType = {
+  name: string;
+  icon: string;
+}[];
+
 export type ProjectType = {
   projectName: string;
   projectLiveLink: string;
@@ -28,10 +33,7 @@ export type ProjectType = {
   projectType: string;
   isPrivate: boolean;
   hasLiveLink: boolean;
-  technologies: {
-    name: string;
-    icon: string;
-  }[];
+  technologies: TechnologiesType;
 };
 
 export const projects: ProjectType[] = [
