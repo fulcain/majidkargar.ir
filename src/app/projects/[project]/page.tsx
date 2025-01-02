@@ -1,4 +1,5 @@
 import { Navbar } from "@/src/components/navbar";
+import { Separator } from "@/src/components/seperator";
 import { exo_2 } from "@/src/constants/exo-font";
 import { projects, projectsName } from "@/src/constants/projects";
 import Image from "next/image";
@@ -41,12 +42,14 @@ export default async function Project({ params }: ProjectProps) {
           <h2 className={`text-3xl md:text-5xl ${exo_2.className}`}>
             {projectName}
           </h2>
+          <Separator marginY="my-1" />
           <div className="flex flex-col gap-2">
-            <h2 className="text-3xl mb-10">توضیحات</h2>
+            <h2 className="text-3xl mb-2">توضیحات</h2>
             <p className="text-palette-primary">{description}</p>
           </div>
+          <Separator marginY="my-1" />
           <div className="flex flex-col gap-2">
-            <h2 className="text-3xl mb-10">ابزار های استفاده شده</h2>
+            <h2 className="text-3xl mb-2">ابزار های استفاده شده</h2>
             <div className="flex flex-wrap flex-row gap-2">
               {technologies.map((tech, idx) => (
                 // TODO: change style
@@ -69,6 +72,7 @@ export default async function Project({ params }: ProjectProps) {
               ))}
             </div>
           </div>
+          <Separator marginY="my-1" />
           <div className="flex flex-row gap-2">
             {hasLiveLink && (
               <Link
