@@ -1,3 +1,4 @@
 [] Add theme changer
-[] Add projects description page for each project showing everything used it
+[x] Add projects description page for each project showing everything used it
 [] Add multiple languages
+[] Add current website to projects
