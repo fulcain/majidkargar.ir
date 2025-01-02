@@ -45,7 +45,7 @@ export const projects: ProjectType[] = [
     projectLiveLink: "https://majidkargar.ir",
     projectRepoLink: "https://github.com/fulcain/majidkargar.ir",
     description: "پورتفولیو ای که الان دارید میبینید.",
-    projectType: "special",
+    projectType: "normal",
     isPrivate: false,
     hasLiveLink: true,
     technologies: [
