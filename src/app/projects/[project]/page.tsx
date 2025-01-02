@@ -2,8 +2,6 @@ import { Navbar } from "@/src/components/navbar";
 import { Separator } from "@/src/components/seperator";
 import { exo_2 } from "@/src/constants/exo-font";
 import { projects, projectsName } from "@/src/constants/projects";
-import Image from "next/image";
-import Link from "next/link";
 import { Technologies } from "./technologies";
 import { ProjectButtons } from "./project-buttons";
 
