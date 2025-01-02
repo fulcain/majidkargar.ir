@@ -52,17 +52,19 @@ export default async function Project({ params }: ProjectProps) {
                 // TODO: change style
                 <div
                   key={idx}
-                  className={`${exo_2.className} bg-palette-secondary border border-palette-primary max-w-[max-content] rounded p-2 flex flex-row align-center justify-between gap-2`}
+                  className={`${exo_2.className} border border-palette-secondary max-w-[max-content] rounded p-2 flex flex-row align-center justify-center gap-2`}
                 >
-                  <span className="text-xs md:text-sm text-black">
+                  <span className="flex justify-center items-center text-xs md:text-sm text-white">
                     {tech.name}
                   </span>
-                  <Image
-                    alt={tech.name}
-                    src={tech.icon}
-                    width={24}
-                    height={24}
-                  />
+                  <div className="bg-palette-secondary rounded-full p-1.5">
+                    <Image
+                      alt={tech.name}
+                      src={tech.icon}
+                      width={24}
+                      height={24}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
