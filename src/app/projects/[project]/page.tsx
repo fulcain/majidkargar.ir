@@ -47,14 +47,16 @@ export default async function Project({ params }: ProjectProps) {
           </div>
           <div className="flex flex-col gap-2">
             <h2 className="text-3xl mb-10">ابزار های استفاده شده</h2>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-wrap flex-row gap-2">
               {technologies.map((tech, idx) => (
                 // TODO: change style
                 <div
                   key={idx}
-                  className={`${exo_2.className} bg-palette-secondary border border-palette-primary rounded p-2 flex flex-row align-center justify-between gap-2`}
+                  className={`${exo_2.className} bg-palette-secondary border border-palette-primary max-w-[max-content] rounded p-2 flex flex-row align-center justify-between gap-2`}
                 >
-                  <span className="text-sm text-black">{tech.name}</span>
+                  <span className="text-xs md:text-sm text-black">
+                    {tech.name}
+                  </span>
                   <Image
                     alt={tech.name}
                     src={tech.icon}
