@@ -42,7 +42,7 @@ export type ProjectType = {
 
 export const projects: ProjectType[] = [
   {
-    projectName: "majidkargar.ir",
+    projectName: "وبسایت شخصی",
     liveLink: "https://majidkargar.ir",
     repoLink: "https://github.com/fulcain/majidkargar.ir",
     description: "پورتفولیو ای که الان دارید میبینید.",
@@ -61,11 +61,11 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    projectName: "Personal Trainer",
+    projectName: "مربی باشگاه",
     liveLink: "https://heydarifatemeh.ir",
     repoLink: "https://github.com/Silverethical/gym-trainer-website",
     description: "پروژه ای برای معرفی مربی باشگاه که مربوط به کارفرما بود.",
-    urlPath: "personal-trainer",
+    urlPath: "gym-trainer",
     isSpecial: true,
     isPrivate: false,
     hasLiveLink: true,
@@ -79,7 +79,7 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    projectName: "Tonrow",
+    projectName: "تنرو",
     description: `پروژه ای مربوط به شرکت برنامه نویسی وبلاین که برای کارفا درست شد. هدف پروژه مدیریت مالی و سفارشات پیک موتوری هست که درون اپلیکیشن بحث های حسابداری و استفاده از مپ و ... مورد استفاده قرار گرفته شده.`,
     urlPath: "tonrow",
     isSpecial: true,
@@ -94,7 +94,7 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    projectName: "Niro Saee",
+    projectName: "نیرو ساعی",
     liveLink: "https://niro-saee.vercel.app/",
     description:
       "پروژه معرفی یک شرکت متخصص در خدمات مهندسی، پیمانکاری و مشاوره و طراحی و اجرای پروژه‌های صنعتی.",
@@ -114,7 +114,7 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    projectName: "SilverBox",
+    projectName: "سیلورباکس",
     liveLink: "https://silverBoxjs.ir",
     repoLink: "https://github.com/silverethical/silverBox",
     description:
@@ -130,7 +130,7 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    projectName: "Memory Game",
+    projectName: "بازی حافظه",
     liveLink: "https://fulcain.github.io/memory-game/",
     repoLink: "https://github.com/fulcain/memory-game",
     description: "یک پروژه تمرینی برای تمرین کردن state در ری اکت.",
@@ -146,7 +146,7 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    projectName: "Invoker Trainer",
+    projectName: "تمرین اینووکر",
     liveLink: "https://fulcain.github.io/invoker-trainer/",
     repoLink: "https://github.com/fulcain/invoker-trainer",
     description: "یک پروژه تمرینی برای هیروی Invoker در بازی Dota2.",
@@ -163,12 +163,3 @@ export const projects: ProjectType[] = [
     ],
   },
 ];
-
-export const projectsName = () => {
-  const names: string[] = [];
-  projects.map((project) =>
-    names.push(project.projectName.replaceAll(" ", "-").toLowerCase()),
-  );
-
-  return names;
-};
