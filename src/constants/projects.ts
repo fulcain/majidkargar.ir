@@ -1,32 +1,14 @@
-const icons = {
-  HTML5: "/icons/html5.svg",
-  CSS3: "/icons/css3.svg",
-  SASS: "/icons/sass.svg",
-  TailwindCSS: "/icons/tailwindcss.svg",
-  Bootstrap: "/icons/bootstrap.svg",
-  JavaScript: "/icons/javascript.svg",
-  TypeScript: "/icons/typescript.svg",
-  MUI: "/icons/mui.svg",
-  ChartJS: "/icons/chartjs.svg",
-  React: "/icons/react.svg",
-  NextJS: "/icons/nextjs.svg",
-  Redux: "/icons/redux.svg",
-  SocketIO: "/icons/socketio.svg",
-  swiper: "/icons/swiper.svg",
-  vite: "/icons/vite.svg",
-  ejs: "/icons/ejs.svg",
-  radixui: "/icons/radixui.svg",
-  lucide: "/icons/lucide.svg",
-  vercel: "/icons/vercel.svg",
-  framer: "/icons/framer.svg",
-};
+import { icons } from "./icons";
 
 export type TechnologiesType = {
   name: string;
-  icon: string;
+  icon: {
+    className?: string;
+    svgLink?: string;
+    color: string;
+  };
 }[];
 
-// TODO:: Add project type (Work) | (Personal)
 export type ProjectType = {
   projectName: string;
   liveLink?: string;
@@ -52,12 +34,36 @@ export const projects: ProjectType[] = [
     hasLiveLink: true,
     projectType: "personal",
     technologies: [
-      { name: "TAILWIND", icon: icons.TailwindCSS },
-      { name: "TYPESCRIPT", icon: icons.TypeScript },
-      { name: "NEXT", icon: icons.NextJS },
-      { name: "MUI", icon: icons.MUI },
-      { name: "VERCEL", icon: icons.vercel },
-      { name: "FRAMER", icon: icons.framer },
+      {
+        name: "TAILWIND",
+        icon: {
+          className: icons.TailwindCSS.className,
+          color: icons.TailwindCSS.color,
+        },
+      },
+      {
+        name: "TYPESCRIPT",
+        icon: {
+          className: icons.TypeScript.className,
+          color: icons.TypeScript.color,
+        },
+      },
+      {
+        name: "NEXT",
+        icon: { className: icons.NextJS.className, color: icons.NextJS.color },
+      },
+      {
+        name: "MUI",
+        icon: { className: icons.MUI.className, color: icons.MUI.color },
+      },
+      {
+        name: "VERCEL",
+        icon: { className: icons.vercel.className, color: icons.vercel.color },
+      },
+      {
+        name: "FRAMER",
+        icon: { className: icons.framer.className, color: icons.framer.color },
+      },
     ],
   },
   {
@@ -71,11 +77,25 @@ export const projects: ProjectType[] = [
     hasLiveLink: true,
     projectType: "work",
     technologies: [
-      { name: "SASS", icon: icons.SASS },
-      { name: "TYPESCRIPT", icon: icons.TypeScript },
-      { name: "REACT", icon: icons.React },
-      { name: "SWIPER", icon: icons.swiper },
-      { name: "VITE", icon: icons.vite },
+      {
+        name: "SASS",
+        icon: { className: icons.SASS.className, color: icons.SASS.color },
+      },
+      {
+        name: "TYPESCRIPT",
+        icon: {
+          className: icons.TypeScript.className,
+          color: icons.TypeScript.color,
+        },
+      },
+      {
+        name: "REACT",
+        icon: { className: icons.React.className, color: icons.React.color },
+      },
+      {
+        name: "SWIPER",
+        icon: { className: icons.swiper.className, color: icons.swiper.color },
+      },
     ],
   },
   {
@@ -87,10 +107,35 @@ export const projects: ProjectType[] = [
     hasLiveLink: false,
     projectType: "work",
     technologies: [
-      { name: "Sass", icon: icons.SASS },
-      { name: "EJS", icon: icons.ejs },
-      { name: "CHART.JS", icon: icons.ChartJS },
-      { name: "JAVASCRIPT", icon: icons.JavaScript },
+      {
+        name: "SASS",
+        icon: { className: icons.SASS.className, color: icons.SASS.color },
+      },
+      {
+        name: "EJS",
+        icon: {
+          svgLink: icons.ejs.svgLink,
+          color: icons.ejs.color,
+        },
+      },
+      {
+        name: "CHART.JS",
+        icon: { svgLink: icons.ChartJS.svgLink, color: icons.ChartJS.color },
+      },
+      {
+        name: "JAVASCRIPT",
+        icon: {
+          className: icons.JavaScript.className,
+          color: icons.JavaScript.color,
+        },
+      },
+      {
+        name: "ALPINE.JS",
+        icon: {
+          className: icons.alpineJS.className,
+          color: icons.alpineJS.color,
+        },
+      },
     ],
   },
   {
@@ -104,13 +149,40 @@ export const projects: ProjectType[] = [
     hasLiveLink: true,
     projectType: "work",
     technologies: [
-      { name: "SASS", icon: icons.SASS },
-      { name: "TAILWIND", icon: icons.TailwindCSS },
-      { name: "TYPESCRIPT", icon: icons.TypeScript },
-      { name: "NEXT.JS", icon: icons.NextJS },
-      { name: "SWIPER", icon: icons.swiper },
-      { name: "RADIX.UI", icon: icons.radixui },
-      { name: "LUCIDE", icon: icons.lucide },
+      {
+        name: "SASS",
+        icon: { className: icons.SASS.className, color: icons.SASS.color },
+      },
+      {
+        name: "TAILWIND",
+        icon: {
+          className: icons.TailwindCSS.className,
+          color: icons.TailwindCSS.color,
+        },
+      },
+      {
+        name: "TYPESCRIPT",
+        icon: {
+          className: icons.TypeScript.className,
+          color: icons.TypeScript.color,
+        },
+      },
+      {
+        name: "NEXT.JS",
+        icon: { className: icons.NextJS.className, color: icons.NextJS.color },
+      },
+      {
+        name: "SWIPER",
+        icon: { className: icons.swiper.className, color: icons.swiper.color },
+      },
+      {
+        name: "RADIX.UI",
+        icon: { svgLink: icons.radixui.svgLink, color: icons.radixui.color },
+      },
+      {
+        name: "LUCIDE",
+        icon: { svgLink: icons.lucide.svgLink, color: icons.lucide.color },
+      },
     ],
   },
   {
@@ -125,8 +197,17 @@ export const projects: ProjectType[] = [
     hasLiveLink: true,
     projectType: "personal",
     technologies: [
-      { name: "SASS", icon: icons.SASS },
-      { name: "JAVASCRIPT", icon: icons.JavaScript },
+      {
+        name: "SASS",
+        icon: { className: icons.SASS.className, color: icons.SASS.color },
+      },
+      {
+        name: "JAVASCRIPT",
+        icon: {
+          className: icons.JavaScript.className,
+          color: icons.JavaScript.color,
+        },
+      },
     ],
   },
   {
@@ -140,10 +221,25 @@ export const projects: ProjectType[] = [
     hasLiveLink: true,
     projectType: "personal",
     technologies: [
-      { name: "SASS", icon: icons.SASS },
-      { name: "JAVASCRIPT", icon: icons.JavaScript },
-      { name: "REACT", icon: icons.React },
-      { name: "MUI", icon: icons.MUI },
+      {
+        name: "SASS",
+        icon: { className: icons.SASS.className, color: icons.SASS.color },
+      },
+      {
+        name: "JAVASCRIPT",
+        icon: {
+          className: icons.JavaScript.className,
+          color: icons.JavaScript.color,
+        },
+      },
+      {
+        name: "REACT",
+        icon: { className: icons.React.className, color: icons.React.color },
+      },
+      {
+        name: "MUI",
+        icon: { className: icons.MUI.className, color: icons.MUI.color },
+      },
     ],
   },
 ];
