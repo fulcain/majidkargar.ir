@@ -6,7 +6,6 @@ type TechnologiesProps = {
   technologies: TechnologiesType;
 };
 
-// TODO: change style of techs
 export const Technologies = ({ technologies }: TechnologiesProps) => {
   return (
     <div className="flex flex-wrap flex-row gap-2">
@@ -28,11 +27,13 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
                 <Image
                   alt={tech.name}
                   src={tech.icon.svgLink}
-                  width={16}
-                  height={16}
+                  width={24}
+                  height={24}
                 />
               )}
-              {tech.icon.className && <i className={tech.icon.className}></i>}
+              {tech.icon.className && (
+                <i className={`text-[24px]  ${tech.icon.className}`}></i>
+              )}
             </div>
           </div>
         );
