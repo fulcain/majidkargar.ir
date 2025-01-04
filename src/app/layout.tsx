@@ -18,6 +18,7 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
+// TODO: Add more meta data
 export const metadata: Metadata = {
   title: "مجید کارگر | برنامه نویس فرانت اند",
   description: "برنامه نویس فرانت اند",

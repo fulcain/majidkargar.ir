@@ -3,15 +3,15 @@ import Link from "next/link";
 type ProjectButtonsProps = {
   hasLiveLink: boolean;
   isPrivate: boolean;
-  projectLiveLink: string;
-  projectRepoLink: string;
+  liveLink: string;
+  repoLink: string;
 };
 
 export const ProjectButtons = ({
   hasLiveLink,
   isPrivate,
-  projectLiveLink,
-  projectRepoLink,
+  liveLink,
+  repoLink,
 }: ProjectButtonsProps) => {
   return (
     <div className="flex flex-row gap-2">
@@ -19,7 +19,7 @@ export const ProjectButtons = ({
         <Link
           className="border border-palette-primary p-2 rounded hover:bg-gray-800 transition"
           target="_blank"
-          href={projectLiveLink}
+          href={liveLink}
         >
           مشاهده پروژه
         </Link>
@@ -28,7 +28,7 @@ export const ProjectButtons = ({
       {!isPrivate && (
         <Link
           className="border border-palette-primary p-2 rounded hover:bg-gray-800 transition"
-          href={projectRepoLink}
+          href={repoLink}
           target="_blank"
         >
           مشاهده کد

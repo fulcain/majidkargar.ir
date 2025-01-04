@@ -5,12 +5,8 @@ import { ProjectCard } from "./project-card";
 import { projects } from "@/src/constants/projects";
 
 const Projects = () => {
-  const normalProjects = projects.filter(
-    (project) => project.projectType === "normal",
-  );
-  const specialProjects = projects.filter(
-    (project) => project.projectType === "special",
-  );
+  const normalProjects = projects.filter((project) => !project.isSpecial);
+  const specialProjects = projects.filter((project) => project.isSpecial);
 
   return (
     <>

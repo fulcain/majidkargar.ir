@@ -26,13 +26,15 @@ export type TechnologiesType = {
   icon: string;
 }[];
 
+// TODO:: Add project type (Work) | (Personal)
+// change current project type tp isSpecial
 export type ProjectType = {
   projectName: string;
-  projectLiveLink: string;
-  projectRepoLink: string;
+  liveLink?: string;
+  repoLink?: string;
   description: string;
-  projectPath: string;
-  projectType: string;
+  urlPath: string;
+  isSpecial: boolean;
   isPrivate: boolean;
   hasLiveLink: boolean;
   technologies: TechnologiesType;
@@ -41,20 +43,17 @@ export type ProjectType = {
 export const projects: ProjectType[] = [
   {
     projectName: "majidkargar.ir",
-    projectPath: "majidkargar.ir",
-    projectLiveLink: "https://majidkargar.ir",
-    projectRepoLink: "https://github.com/fulcain/majidkargar.ir",
+    liveLink: "https://majidkargar.ir",
+    repoLink: "https://github.com/fulcain/majidkargar.ir",
     description: "پورتفولیو ای که الان دارید میبینید.",
-    projectType: "normal",
+    urlPath: "majidkargar.ir",
+    isSpecial: false,
     isPrivate: false,
     hasLiveLink: true,
     technologies: [
       { name: "TAILWIND", icon: icons.TailwindCSS },
       { name: "TYPESCRIPT", icon: icons.TypeScript },
-      {
-        name: "NEXT",
-        icon: icons.NextJS,
-      },
+      { name: "NEXT", icon: icons.NextJS },
       { name: "MUI", icon: icons.MUI },
       { name: "VERCEL", icon: icons.vercel },
       { name: "FRAMER", icon: icons.framer },
@@ -62,31 +61,26 @@ export const projects: ProjectType[] = [
   },
   {
     projectName: "Personal Trainer",
-    projectPath: "personal-trainer",
-    projectLiveLink: "https://heydarifatemeh.ir",
-    projectRepoLink: "https://github.com/Silverethical/gym-trainer-website",
+    liveLink: "https://heydarifatemeh.ir",
+    repoLink: "https://github.com/Silverethical/gym-trainer-website",
     description: "پروژه ای برای معرفی مربی باشگاه که مربوط به کارفرما بود.",
-    projectType: "special",
+    urlPath: "personal-trainer",
+    isSpecial: true,
     isPrivate: false,
     hasLiveLink: true,
     technologies: [
       { name: "SASS", icon: icons.SASS },
       { name: "TYPESCRIPT", icon: icons.TypeScript },
-      {
-        name: "REACT",
-        icon: icons.React,
-      },
+      { name: "REACT", icon: icons.React },
       { name: "SWIPER", icon: icons.swiper },
       { name: "VITE", icon: icons.vite },
     ],
   },
   {
     projectName: "Tonrow",
-    projectPath: "tonrow",
-    projectLiveLink: "https://tonrow.ir",
-    projectRepoLink: "https://tonrow.ir",
     description: `پروژه ای مربوط به شرکت برنامه نویسی وبلاین که برای کارفا درست شد. هدف پروژه مدیریت مالی و سفارشات پیک موتوری هست که درون اپلیکیشن بحث های حسابداری و استفاده از مپ و ... مورد استفاده قرار گرفته شده.`,
-    projectType: "special",
+    urlPath: "tonrow",
+    isSpecial: true,
     isPrivate: true,
     hasLiveLink: false,
     technologies: [
@@ -98,22 +92,18 @@ export const projects: ProjectType[] = [
   },
   {
     projectName: "Niro Saee",
-    projectPath: "niro-saee",
-    projectLiveLink: "https://niro-saee.vercel.app/",
-    projectRepoLink: "https://niro-saee.vercel.app/",
+    liveLink: "https://niro-saee.vercel.app/",
     description:
       "پروژه معرفی یک شرکت متخصص در خدمات مهندسی، پیمانکاری و مشاوره و طراحی و اجرای پروژه‌های صنعتی.",
-    projectType: "special",
+    urlPath: "niro-saee",
+    isSpecial: true,
     isPrivate: true,
     hasLiveLink: true,
     technologies: [
       { name: "SASS", icon: icons.SASS },
       { name: "TAILWIND", icon: icons.TailwindCSS },
       { name: "TYPESCRIPT", icon: icons.TypeScript },
-      {
-        name: "NEXT.JS",
-        icon: icons.NextJS,
-      },
+      { name: "NEXT.JS", icon: icons.NextJS },
       { name: "SWIPER", icon: icons.swiper },
       { name: "RADIX.UI", icon: icons.radixui },
       { name: "LUCIDE", icon: icons.lucide },
@@ -121,12 +111,12 @@ export const projects: ProjectType[] = [
   },
   {
     projectName: "SilverBox",
-    projectPath: "silverbox",
-    projectLiveLink: "https://silverBoxjs.ir",
-    projectRepoLink: "https://github.com/silverethical/silverBox",
+    liveLink: "https://silverBoxjs.ir",
+    repoLink: "https://github.com/silverethical/silverBox",
     description:
       "یک کتابخانه جاوا اسکریپت هست که وظیفه ساخت مودالو آلرت هارو داره که به صورت متن باز موجود هست.",
-    projectType: "special",
+    urlPath: "silverbox",
+    isSpecial: true,
     isPrivate: false,
     hasLiveLink: true,
     technologies: [
@@ -136,42 +126,33 @@ export const projects: ProjectType[] = [
   },
   {
     projectName: "Memory Game",
-    projectPath: "memory-game",
-    projectLiveLink: "https://fulcain.github.io/memory-game/",
-    projectRepoLink: "https://github.com/fulcain/memory-game",
+    liveLink: "https://fulcain.github.io/memory-game/",
+    repoLink: "https://github.com/fulcain/memory-game",
     description: "یک پروژه تمرینی برای تمرین کردن state در ری اکت.",
-    projectType: "normal",
+    urlPath: "memory-game",
+    isSpecial: false,
     isPrivate: false,
     hasLiveLink: true,
     technologies: [
       { name: "SASS", icon: icons.SASS },
       { name: "JAVASCRIPT", icon: icons.JavaScript },
-      {
-        name: "REACT",
-        icon: icons.React,
-      },
+      { name: "REACT", icon: icons.React },
     ],
   },
   {
     projectName: "Invoker Trainer",
-    projectPath: "invoker-trainer",
-    projectLiveLink: "https://fulcain.github.io/invoker-trainer/",
-    projectRepoLink: "https://github.com/fulcain/invoker-trainer",
+    liveLink: "https://fulcain.github.io/invoker-trainer/",
+    repoLink: "https://github.com/fulcain/invoker-trainer",
     description: "یک پروژه تمرینی برای هیروی Invoker در بازی Dota2.",
-    projectType: "normal",
+    urlPath: "invoker-trainer",
+    isSpecial: false,
     isPrivate: false,
     hasLiveLink: true,
     technologies: [
       { name: "SASS", icon: icons.SASS },
       { name: "JAVASCRIPT", icon: icons.JavaScript },
-      {
-        name: "REACT",
-        icon: icons.React,
-      },
-      {
-        name: "MUI",
-        icon: icons.MUI,
-      },
+      { name: "REACT", icon: icons.React },
+      { name: "MUI", icon: icons.MUI },
     ],
   },
 ];

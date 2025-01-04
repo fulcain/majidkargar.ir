@@ -8,12 +8,12 @@ type ProjectCardType = {
 };
 
 export const ProjectCard = ({ project }: ProjectCardType) => {
-  const { projectName, description, projectPath } = project;
+  const { projectName, description, urlPath } = project;
 
   return (
     <Card>
       <Link
-        href={`/projects/${projectPath}`}
+        href={`/projects/${urlPath}`}
         className="flex flex-col relative w-full h-full p-4 md:p-8"
       >
         <span

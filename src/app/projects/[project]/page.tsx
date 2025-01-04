@@ -14,21 +14,21 @@ type ProjectProps = {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return projectsName().map((project) => ({ project }));
+  return projectsName().map((project: string[]) => ({ project }));
 }
 
 export default async function Project({ params }: ProjectProps) {
   const projectNameInPathname = (await params).project;
 
   const currentProject = projects.filter(
-    (project) => project.projectPath === projectNameInPathname,
+    (project) => project.urlPath === projectNameInPathname,
   )[0];
 
   const {
     projectName,
-    projectLiveLink,
+    liveLink,
     technologies,
-    projectRepoLink,
+    repoLink,
     description,
     isPrivate,
     hasLiveLink,
@@ -39,6 +39,7 @@ export default async function Project({ params }: ProjectProps) {
       <Navbar />
       <section className="mx-10 py-24">
         <div className="container flex flex-col gap-10">
+          {/* TODO: Add a label for project type (Personal) | (Work) */}
           <h2 className={`text-3xl md:text-5xl ${exo_2.className}`}>
             {projectName}
           </h2>
@@ -56,8 +57,8 @@ export default async function Project({ params }: ProjectProps) {
           <ProjectButtons
             isPrivate={isPrivate}
             hasLiveLink={hasLiveLink}
-            projectLiveLink={projectLiveLink}
-            projectRepoLink={projectRepoLink}
+            liveLink={liveLink || ""}
+            repoLink={repoLink || ""}
           />
         </div>
       </section>
