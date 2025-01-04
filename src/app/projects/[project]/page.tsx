@@ -3,6 +3,7 @@ import { Separator } from "@/src/components/seperator";
 import { projects } from "@/src/constants/projects";
 import { Technologies } from "./technologies";
 import { ProjectButtons } from "./project-buttons";
+import { ProjectTitle } from "./project-title";
 
 type ProjectProps = {
   params: Promise<{
@@ -34,19 +35,12 @@ export default async function Project({ params }: ProjectProps) {
     projectType,
   } = currentProject;
 
-  const typeOfTheProject = projectType === "work" ? "کاری" : "شخصی";
-
   return (
     <>
       <Navbar />
       <section className="mx-10 py-24">
         <div className="container flex flex-col gap-10">
-          <div className="flex flex-col md:flex-row gap-2 items-start md:items-center justify-center md:justify-start">
-            <h2 className={"text-3xl md:text-5xl"}>{projectName}</h2>
-            <div className="max-h-[35px] min-w-[70px] flex items-center justify-center p-2 text-palette-secondary border border-zinc-800">
-              {typeOfTheProject}
-            </div>
-          </div>
+          <ProjectTitle projectName={projectName} projectType={projectType} />
           <Separator marginY="my-1" />
           <div className="flex flex-col gap-2">
             <h2 className="text-3xl mb-2">توضیحات</h2>
