@@ -27,7 +27,6 @@ export const Navbar = () => {
               </Link>
             ))}
           </div>
-          {/* TODO: change to home icon */}
           <div className="cursor-pointer" onClick={() => window.history.back()}>
             <ArrowBack
               sx={{ height: "24px", width: "24px" }}
