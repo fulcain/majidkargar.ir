@@ -130,22 +130,6 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    projectName: "بازی حافظه",
-    liveLink: "https://fulcain.github.io/memory-game/",
-    repoLink: "https://github.com/fulcain/memory-game",
-    description: "یک پروژه تمرینی برای تمرین کردن state در ری اکت.",
-    urlPath: "memory-game",
-    isSpecial: false,
-    isPrivate: false,
-    hasLiveLink: true,
-    projectType: "personal",
-    technologies: [
-      { name: "SASS", icon: icons.SASS },
-      { name: "JAVASCRIPT", icon: icons.JavaScript },
-      { name: "REACT", icon: icons.React },
-    ],
-  },
-  {
     projectName: "تمرین اینووکر",
     liveLink: "https://fulcain.github.io/invoker-trainer/",
     repoLink: "https://github.com/fulcain/invoker-trainer",
