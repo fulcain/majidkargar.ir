@@ -27,7 +27,6 @@ export type TechnologiesType = {
 }[];
 
 // TODO:: Add project type (Work) | (Personal)
-// change current project type tp isSpecial
 export type ProjectType = {
   projectName: string;
   liveLink?: string;
@@ -38,6 +37,7 @@ export type ProjectType = {
   isPrivate: boolean;
   hasLiveLink: boolean;
   technologies: TechnologiesType;
+  projectType: "work" | "personal";
 };
 
 export const projects: ProjectType[] = [
@@ -50,6 +50,7 @@ export const projects: ProjectType[] = [
     isSpecial: false,
     isPrivate: false,
     hasLiveLink: true,
+    projectType: "personal",
     technologies: [
       { name: "TAILWIND", icon: icons.TailwindCSS },
       { name: "TYPESCRIPT", icon: icons.TypeScript },
@@ -68,6 +69,7 @@ export const projects: ProjectType[] = [
     isSpecial: true,
     isPrivate: false,
     hasLiveLink: true,
+    projectType: "work",
     technologies: [
       { name: "SASS", icon: icons.SASS },
       { name: "TYPESCRIPT", icon: icons.TypeScript },
@@ -83,6 +85,7 @@ export const projects: ProjectType[] = [
     isSpecial: true,
     isPrivate: true,
     hasLiveLink: false,
+    projectType: "work",
     technologies: [
       { name: "Sass", icon: icons.SASS },
       { name: "EJS", icon: icons.ejs },
@@ -99,6 +102,7 @@ export const projects: ProjectType[] = [
     isSpecial: true,
     isPrivate: true,
     hasLiveLink: true,
+    projectType: "work",
     technologies: [
       { name: "SASS", icon: icons.SASS },
       { name: "TAILWIND", icon: icons.TailwindCSS },
@@ -119,6 +123,7 @@ export const projects: ProjectType[] = [
     isSpecial: true,
     isPrivate: false,
     hasLiveLink: true,
+    projectType: "personal",
     technologies: [
       { name: "SASS", icon: icons.SASS },
       { name: "JAVASCRIPT", icon: icons.JavaScript },
@@ -133,6 +138,7 @@ export const projects: ProjectType[] = [
     isSpecial: false,
     isPrivate: false,
     hasLiveLink: true,
+    projectType: "personal",
     technologies: [
       { name: "SASS", icon: icons.SASS },
       { name: "JAVASCRIPT", icon: icons.JavaScript },
@@ -148,6 +154,7 @@ export const projects: ProjectType[] = [
     isSpecial: false,
     isPrivate: false,
     hasLiveLink: true,
+    projectType: "personal",
     technologies: [
       { name: "SASS", icon: icons.SASS },
       { name: "JAVASCRIPT", icon: icons.JavaScript },
