@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     description: "برنامه نویس فرانت اند",
     url: "https://majidkargar.ir",
     siteName: "مجید کارگر | برنامه نویس فرانت اند",
-    images: [
-      // TODO: change this
-      {
-        url: "https://chronark.com/og.png",
-        width: 1920,
-        height: 1080,
-      },
-    ],
+    // images: [
+    //   // TODO: change this
+    //   {
+    //     url: "https://chronark.com/og.png",
+    //     width: 1920,
+    //     height: 1080,
+    //   },
+    // ],
     locale: "fa-IR",
     type: "website",
   },
