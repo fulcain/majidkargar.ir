@@ -1,12 +1,10 @@
 "use client";
-
 import { HomeNavigation } from "./home-navigation";
 import localFont from "next/font/local";
 import { Bounce, Zoom } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
-import { useLocalStorage } from "@/src/hooks/useLocalStorage";
-import { useEffect } from "react";
 import SetLanguage from "@/src/components/set-language";
+import { getLanguageCookie } from "@/src/app/_helpers/initializeLanguage";
 
 const gAseman = localFont({
   src: "../../style/fonts/g-aseman.ttf",
@@ -14,12 +12,7 @@ const gAseman = localFont({
 });
 
 export default function Home() {
-  const [language, setLanguage] = useLocalStorage("language", "fa");
-
-  useEffect(() => {
-    setLanguage("fa");
-  }, []);
-
+  getLanguageCookie();
   return (
     <div className="h-[100vh] bg-gradient-to-br from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <div className="container">

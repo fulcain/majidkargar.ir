@@ -1,16 +1,15 @@
-import { useLocalStorage } from "@/src/hooks/useLocalstorage";
 import { GTranslate } from "@mui/icons-material";
 import { Box, Modal } from "@mui/material";
 import { useState } from "react";
+import { setLanguage } from "@/src/app/_helpers/setLanguage";
 
 const SetLanguage = () => {
-  const [language, setLanguage] = useLocalStorage("language");
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const setAppLanguage = (language: string) => {
-    setLanguage(language);
+  const setAppLanguage = async (language: "fa" | "en") => {
+    await setLanguage(language);
     handleClose();
     window.location.reload();
   };
