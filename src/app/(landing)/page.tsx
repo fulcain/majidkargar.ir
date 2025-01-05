@@ -6,6 +6,7 @@ import { Bounce, Zoom } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
 import { useLocalStorage } from "@/src/hooks/useLocalStorage";
 import { useEffect } from "react";
+import SetLanguage from "@/src/components/set-language";
 
 const gAseman = localFont({
   src: "../../style/fonts/g-aseman.ttf",
@@ -23,9 +24,14 @@ export default function Home() {
     <div className="h-[100vh] bg-gradient-to-br from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <div className="container">
         <section className="h-dvh flex items-center justify-center flex-col gap-8 md:gap-14">
-          <Bounce>
-            <HomeNavigation />
-          </Bounce>
+          <div className="flex flex-row gap-2">
+            <Bounce>
+              <HomeNavigation />
+            </Bounce>
+            <Bounce>
+              <SetLanguage />
+            </Bounce>
+          </div>
           <Zoom>
             <h1 className={`${gAseman.className} text-[80px] md:text-[100px]`}>
               مجید کارگر

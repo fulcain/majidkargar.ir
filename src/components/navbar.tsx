@@ -2,6 +2,7 @@
 import { links } from "@/src/constants/navigations";
 import Link from "next/link";
 import { Home, ArrowBack } from "@mui/icons-material";
+import LanguageSelector from "@/src/components/set-language";
 
 import { RevealOnScroll } from "./reveal-on-scroll";
 
@@ -26,6 +27,7 @@ export const Navbar = () => {
                 {link.text}
               </Link>
             ))}
+            <LanguageSelector />
           </div>
           <div className="cursor-pointer" onClick={() => window.history.back()}>
             <ArrowBack
