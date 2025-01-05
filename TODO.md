@@ -1,4 +1,3 @@
-- [ ] Add theme changer
 - [x] Add projects description page for each project 
 - [ ] Add multiple languages
 - [x] Add current website to projects
