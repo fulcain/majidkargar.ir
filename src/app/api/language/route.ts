@@ -20,14 +20,15 @@ export async function POST(req: Request) {
 
 export async function GET() {
   const cookieStore = await cookies();
-  const hasLanguageCookie = cookieStore.has("language");
   const languageCookie = cookieStore.get("language");
 
-  if (hasLanguageCookie) {
-    return new Response(languageCookie?.value);
-  } else {
-    cookieStore.set("language", "fa", { expires: expireDate() });
+  if (languageCookie) {
+    return new Response(languageCookie.value);
   }
 
-  return new Response("Hello, Next.js!");
+  const defaultLanguage = "fa";
+
+  cookieStore.set("language", defaultLanguage, { expires: expireDate() });
+
+  return new Response(defaultLanguage);
 }

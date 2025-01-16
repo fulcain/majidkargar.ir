@@ -1,0 +1,12 @@
+{
+  "home": {
+    "homeNav": {
+      "projects": "Project",
+      "contact": "Pontact"
+    },
+    "mainText": {
+      "my-name": "Majid Kargar",
+      "description": "Front-End Developer since fall 2023"
+    }
+  }
+}

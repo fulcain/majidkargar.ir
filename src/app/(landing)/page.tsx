@@ -4,7 +4,9 @@ import localFont from "next/font/local";
 import { Bounce, Zoom } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
 import SetLanguage from "@/src/components/set-language";
-import { getLanguageCookie } from "@/src/app/_helpers/initializeLanguage";
+import { getLanguageCookie } from "@/src/app/_helpers/getLanguage";
+import { useEffect, useState } from "react";
+import { getLangs } from "../languages";
 
 const gAseman = localFont({
   src: "../../style/fonts/g-aseman.ttf",
@@ -12,7 +14,19 @@ const gAseman = localFont({
 });
 
 export default function Home() {
-  getLanguageCookie();
+  const [dict, setDict] = useState<any>();
+
+  useEffect(() => {
+    (async () => {
+      const language = await getLanguageCookie();
+
+      const currentDictionary = await getLangs("fa");
+      console.log(currentDictionary);
+      setDict(currentDictionary);
+      console.log(dict);
+    })();
+  }, []);
+
   return (
     <div className="h-[100vh] bg-gradient-to-br from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <div className="container">
@@ -27,7 +41,7 @@ export default function Home() {
           </div>
           <Zoom>
             <h1 className={`${gAseman.className} text-[80px] md:text-[100px]`}>
-              مجید کارگر
+              مجید کارگر {dict.home.mainText["my-name"]}
             </h1>
           </Zoom>
           <div className="flex flex-row gap-1 text-palette-primary">
