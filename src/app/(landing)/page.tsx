@@ -6,7 +6,6 @@ import { Bounce, Zoom } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
 import { useLocalStorage } from "@/src/hooks/useLocalStorage";
 import { useEffect } from "react";
-import SetLanguage from "@/src/components/set-language";
 
 const gAseman = localFont({
   src: "../../style/fonts/g-aseman.ttf",
@@ -27,9 +26,6 @@ export default function Home() {
           <div className="flex flex-row gap-2">
             <Bounce>
               <HomeNavigation />
-            </Bounce>
-            <Bounce>
-              <SetLanguage />
             </Bounce>
           </div>
           <Zoom>

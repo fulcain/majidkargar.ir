@@ -210,36 +210,4 @@ export const projects: ProjectType[] = [
       },
     ],
   },
-  {
-    projectName: "تمرین اینووکر",
-    liveLink: "https://fulcain.github.io/invoker-trainer/",
-    repoLink: "https://github.com/fulcain/invoker-trainer",
-    description: "یک پروژه تمرینی برای هیروی Invoker در بازی Dota2.",
-    urlPath: "invoker-trainer",
-    isSpecial: false,
-    isPrivate: false,
-    hasLiveLink: true,
-    projectType: "personal",
-    technologies: [
-      {
-        name: "SASS",
-        icon: { className: icons.SASS.className, color: icons.SASS.color },
-      },
-      {
-        name: "JAVASCRIPT",
-        icon: {
-          className: icons.JavaScript.className,
-          color: icons.JavaScript.color,
-        },
-      },
-      {
-        name: "REACT",
-        icon: { className: icons.React.className, color: icons.React.color },
-      },
-      {
-        name: "MUI",
-        icon: { className: icons.MUI.className, color: icons.MUI.color },
-      },
-    ],
-  },
 ];
