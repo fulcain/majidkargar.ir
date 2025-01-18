@@ -1,19 +1,18 @@
-import { useLocalStorage } from "@/src/hooks/useLocalstorage";
 import { GTranslate } from "@mui/icons-material";
 import { Box, Modal } from "@mui/material";
 import { useState } from "react";
 
 const SetLanguage = () => {
-  const [language, setLanguage] = useLocalStorage("language");
+  // const [language, setLanguage] = useLocalStorage("language");
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const setAppLanguage = (language: string) => {
-    setLanguage(language);
-    handleClose();
-    window.location.reload();
-  };
+  // const setAppLanguage = (language: string) => {
+  //   setLanguage(language);
+  //   handleClose();
+  //   window.location.reload();
+  // };
 
   const style = {
     position: "absolute",
@@ -42,13 +41,11 @@ const SetLanguage = () => {
         >
           <Box className="bg-palette-primary rounded" sx={style}>
             <button
-              onClick={() => setAppLanguage("fa")}
               className="rounded block w-full px-4 py-2 text-left hover:bg-palette-secondary hover:text-black transition"
             >
                Persian
             </button>
             <button
-              onClick={() => setAppLanguage("en")}
               className="rounded block w-full px-4 py-2 text-left hover:bg-palette-secondary hover:text-black transition"
             >
               English
