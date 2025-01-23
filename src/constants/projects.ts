@@ -140,7 +140,7 @@ export const projects: ProjectType[] = [
   },
   {
     projectName: "نیرو ساعی",
-    liveLink: "https://niro-saee.vercel.app/",
+    liveLink: "https://niro-saie.vercel.app/",
     description:
       "پروژه معرفی یک شرکت متخصص در خدمات مهندسی، پیمانکاری و مشاوره و طراحی و اجرای پروژه‌های صنعتی.",
     urlPath: "niro-saee",
