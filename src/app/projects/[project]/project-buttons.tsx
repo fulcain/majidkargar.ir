@@ -1,3 +1,4 @@
+import { Code, GitHub, LaptopMac, Preview } from "@mui/icons-material";
 import Link from "next/link";
 
 type ProjectButtonsProps = {
@@ -21,7 +22,10 @@ export const ProjectButtons = ({
           target="_blank"
           href={liveLink}
         >
-          مشاهده پروژه
+          <div className="flex flex-row gap-2 items-center justify-center">
+            <span>مشاهده پروژه</span>
+            <LaptopMac />
+          </div>
         </Link>
       )}
 
@@ -31,7 +35,10 @@ export const ProjectButtons = ({
           href={repoLink}
           target="_blank"
         >
-          مشاهده کد
+          <div className="flex flex-row gap-2 items-center justify-center">
+            <span> مشاهده کد</span>
+            <Code />
+          </div>
         </Link>
       )}
     </div>
