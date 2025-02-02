@@ -211,4 +211,44 @@ export const projects: ProjectType[] = [
       },
     ],
   },
+  {
+    projectName: "فاکتور فروش رمیونا",
+    liveLink: "https://factor.remiona.ir/",
+    repoLink: "https://github.com/Silverethical/online_invoice/",
+    description:
+      "این پروژه ابزاری حرفه‌ای برای صدور فاکتور فروشگاهی است که به‌صورت اختصاصی برای فروشگاه رمیونا طراحی و پیاده‌سازی شده است. این ابزار به فروشگاه کمک می‌کند تا فرآیند صدور فاکتور را سریع‌تر، دقیق‌تر و استانداردتر انجام داده و اطلاعات خرید مشتریان را به شکلی منظم ذخیره کند. (پروژه صرفا جهت استفاده در دسکتاپ است)",
+    urlPath: "remonia",
+    isSpecial: true,
+    isPrivate: false,
+    hasLiveLink: true,
+    projectType: "work",
+    technologies: [
+      {
+        name: "TAILWIND",
+        icon: {
+          className: icons.TailwindCSS.className,
+          color: icons.TailwindCSS.color,
+        },
+      },
+      {
+        name: "TYPESCRIPT",
+        icon: {
+          className: icons.TypeScript.className,
+          color: icons.TypeScript.color,
+        },
+      },
+      {
+        name: "REACT",
+        icon: { className: icons.React.className, color: icons.React.color },
+      },
+      {
+        name: "MUI",
+        icon: { className: icons.MUI.className, color: icons.MUI.color },
+      },
+      {
+        name: "Ant Design",
+        icon: { className: icons.antDesign.className, color: icons.antDesign.color },
+      },
+    ],
+  },
 ];
