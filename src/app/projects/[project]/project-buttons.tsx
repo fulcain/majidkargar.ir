@@ -1,4 +1,4 @@
-import { Code, GitHub, LaptopMac, Preview } from "@mui/icons-material";
+import { Code, LaptopMac } from "@mui/icons-material";
 import Link from "next/link";
 
 type ProjectButtonsProps = {
