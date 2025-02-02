@@ -41,13 +41,11 @@ const SetLanguage = () => {
         >
           <Box className="bg-palette-primary rounded" sx={style}>
             <button
-              onClick={() => setAppLanguage("fa")}
               className="rounded block w-full px-4 py-2 text-left hover:bg-palette-secondary hover:text-black transition"
             >
                Persian
             </button>
             <button
-              onClick={() => setAppLanguage("en")}
               className="rounded block w-full px-4 py-2 text-left hover:bg-palette-secondary hover:text-black transition"
             >
               English

@@ -140,12 +140,13 @@ export const projects: ProjectType[] = [
   },
   {
     projectName: "نیرو ساعی",
-    liveLink: "https://niro-saee.vercel.app/",
+    liveLink: "https://niro-saie.vercel.app/",
+    repoLink: "https://github.com/fulcain/niro-saie",
     description:
       "پروژه معرفی یک شرکت متخصص در خدمات مهندسی، پیمانکاری و مشاوره و طراحی و اجرای پروژه‌های صنعتی.",
-    urlPath: "niro-saee",
+    urlPath: "niro-saie",
     isSpecial: true,
-    isPrivate: true,
+    isPrivate: false,
     hasLiveLink: true,
     projectType: "work",
     technologies: [
@@ -211,25 +212,29 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    projectName: "تمرین اینووکر",
-    liveLink: "https://fulcain.github.io/invoker-trainer/",
-    repoLink: "https://github.com/fulcain/invoker-trainer",
-    description: "یک پروژه تمرینی برای هیروی Invoker در بازی Dota2.",
-    urlPath: "invoker-trainer",
-    isSpecial: false,
+    projectName: "فاکتور فروش رمیونا",
+    liveLink: "https://factor.remiona.ir/",
+    repoLink: "https://github.com/Silverethical/online_invoice/",
+    description:
+      "این پروژه ابزاری حرفه‌ای برای صدور فاکتور فروشگاهی است که به‌صورت اختصاصی برای فروشگاه رمیونا طراحی و پیاده‌سازی شده است. این ابزار به فروشگاه کمک می‌کند تا فرآیند صدور فاکتور را سریع‌تر، دقیق‌تر و استانداردتر انجام داده و اطلاعات خرید مشتریان را به شکلی منظم ذخیره کند. (پروژه صرفا جهت استفاده در دسکتاپ است)",
+    urlPath: "remonia",
+    isSpecial: true,
     isPrivate: false,
     hasLiveLink: true,
-    projectType: "personal",
+    projectType: "work",
     technologies: [
       {
-        name: "SASS",
-        icon: { className: icons.SASS.className, color: icons.SASS.color },
+        name: "TAILWIND",
+        icon: {
+          className: icons.TailwindCSS.className,
+          color: icons.TailwindCSS.color,
+        },
       },
       {
-        name: "JAVASCRIPT",
+        name: "TYPESCRIPT",
         icon: {
-          className: icons.JavaScript.className,
-          color: icons.JavaScript.color,
+          className: icons.TypeScript.className,
+          color: icons.TypeScript.color,
         },
       },
       {
@@ -239,6 +244,10 @@ export const projects: ProjectType[] = [
       {
         name: "MUI",
         icon: { className: icons.MUI.className, color: icons.MUI.color },
+      },
+      {
+        name: "Ant Design",
+        icon: { className: icons.antDesign.className, color: icons.antDesign.color },
       },
     ],
   },

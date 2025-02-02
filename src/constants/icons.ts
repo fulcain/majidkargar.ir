@@ -22,4 +22,5 @@ export const icons = {
   framer: { className: "devicon-framermotion-original", color: "#0055FF" },
   ejs: { svgLink: "/icons/ejs.svg", color: "#323330" },
   alpineJS: { className: "devicon-alpinejs-original", color: "#77C1D2" },
+  antDesign: { className: "devicon-antdesign-plain", color: "#4285eb" },
 };

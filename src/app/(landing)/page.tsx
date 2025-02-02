@@ -35,9 +35,6 @@ export default function Home() {
             <Bounce>
               <HomeNavigation />
             </Bounce>
-            <Bounce>
-              <SetLanguage />
-            </Bounce>
           </div>
           <Zoom>
             <h1 className={`${gAseman.className} text-[80px] md:text-[100px]`}>
