@@ -250,5 +250,43 @@ export const projects: ProjectType[] = [
         icon: { className: icons.antDesign.className, color: icons.antDesign.color },
       },
     ],
+	},
+	  {
+    projectName: "فرانت چپتر ۱۴۰۳",
+    liveLink: "https://frontchapter.ir/",
+    repoLink: "https://github.com/frontchapter/nextjs/",
+    description:
+      "همکاری به عنوان برنامه نویس فرانت اند در پروژه لندینگ همایش فرانت چپتر در سال ۱۴۰۳.",
+    urlPath: "frontchapter03",
+    isSpecial: true,
+    isPrivate: false,
+    hasLiveLink: true,
+    projectType: "work",
+    technologies: [
+      {
+        name: "TAILWIND",
+        icon: {
+          className: icons.TailwindCSS.className,
+          color: icons.TailwindCSS.color,
+        },
+      },
+      {
+        name: "TYPESCRIPT",
+        icon: {
+          className: icons.TypeScript.className,
+          color: icons.TypeScript.color,
+        },
+      },
+      {
+        name: "NEXT.JS",
+        icon: { className: icons.NextJS.className, color: icons.NextJS.color },
+	  },
+	  {
+        name: "LaunchUI",
+        icon: { svgLink: icons.launchui.svgLink, color: icons.launchui.color },
+      },
+    ],
   },
 ];
+
+

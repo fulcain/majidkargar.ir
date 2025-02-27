@@ -23,4 +23,6 @@ export const icons = {
   ejs: { svgLink: "/icons/ejs.svg", color: "#323330" },
   alpineJS: { className: "devicon-alpinejs-original", color: "#77C1D2" },
   antDesign: { className: "devicon-antdesign-plain", color: "#4285eb" },
+  shadcn: { svgLink: "/icons/shadcn.svg", color: "#20232A" },
+  launchui: { svgLink: "/icons/launchui.svg", color: "#20232A" },
 };
