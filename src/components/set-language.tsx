@@ -1,57 +1,58 @@
+"use client";
+
 import { GTranslate } from "@mui/icons-material";
-import { Box, Modal } from "@mui/material";
-import { useState } from "react";
-import { setLanguage } from "@/src/app/_helpers/setLanguage";
+import { useState, useRef, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
+	import { routing } from "@/src/i18n/routing";
 
 const SetLanguage = () => {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const ref = useRef<HTMLDivElement>(null);
 
-  const setAppLanguage = async (language: "fa" | "en") => {
-    await setLanguage(language);
-    handleClose();
-    window.location.reload();
+  const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = useLocale();
+
+  const setAppLanguage = (language: "fa" | "en") => {
+    const segments = pathname.split("/");
+    segments[1] = language;
+    router.push(segments.join("/"));
+    setOpen(false);
   };
 
-  const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 200,
-    border: "2px solid #000",
-    boxShadow: 24,
-    dir: "rtl",
-    p: 2,
-  };
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <div className="relative inline-block text-left text-palette-primary hover:text-palette-secondary transition ">
-      <button onClick={handleOpen}>
-        <GTranslate sx={{ height: "20px", width: "20px" }} />
+    <div ref={ref} className="relative inline-block text-left">
+      <button
+        onClick={() => setOpen((prev) => !prev)}
+        className="flex items-center gap-1 text-zinc-400 hover:text-zinc-100 transition-colors"
+      >
+        <GTranslate sx={{ height: "18px", width: "18px" }} />
       </button>
+
       {open && (
-        <Modal
-          sx={{ direction: "rtl" }}
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box className="bg-palette-primary rounded" sx={style}>
+        <div className="absolute right-0 mt-2 w-36 rounded-md border border-zinc-700 bg-zinc-900 shadow-lg z-50">
+          {routing.locales.map((locale) => (
             <button
-              className="rounded block w-full px-4 py-2 text-left hover:bg-palette-secondary hover:text-black transition"
+              key={locale}
+              onClick={() => setAppLanguage(locale as "fa" | "en")}
+              disabled={locale === currentLocale}
+              className="block w-full px-4 py-2 text-sm text-left text-zinc-300 hover:bg-zinc-800 hover:text-zinc-100 transition-colors first:rounded-t-md last:rounded-b-md disabled:opacity-40 disabled:cursor-not-allowed"
             >
-               Persian
+              {locale === "fa" ? "Persian" : "English"}
             </button>
-            <button
-              className="rounded block w-full px-4 py-2 text-left hover:bg-palette-secondary hover:text-black transition"
-            >
-              English
-            </button>
-          </Box>
-        </Modal>
+          ))}
+        </div>
       )}
     </div>
   );

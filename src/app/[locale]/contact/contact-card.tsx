@@ -2,12 +2,15 @@ import { Card } from "@/src/components/card";
 import { ContactMeType } from "@/src/constants/contactMe";
 import { exo_2 } from "@/src/constants/exo-font";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 type ContactCardType = {
   item: ContactMeType;
 };
 
 const ContactCard = ({ item }: ContactCardType) => {
+  const t = useTranslations("contact-me");
+
   return (
     <Card>
       <Link
@@ -24,7 +27,7 @@ const ContactCard = ({ item }: ContactCardType) => {
           {item.text}
         </h3>
         <span className="text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-          {item.name}
+          {t(item.name)}
         </span>
         <span className="absolute -z-[1] w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"></span>
       </Link>

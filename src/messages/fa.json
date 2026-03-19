@@ -1,0 +1,19 @@
+{
+  "home": {
+    "name": "مجید کارگر",
+    "description": "برنامه نویس فرانت اند از پاییز ۱۴۰۲"
+  },
+  "nav": {
+    "projects": "پروژه ها",
+    "contact-me": "ارتباط با من"
+  },
+  "not-found": {
+    "page-not-found": "صفحه پیدا نشد!",
+    "go-back-to-home": "برگشت به خانه"
+  },
+  "contact-me": {
+    "email": "ایمیل",
+    "github": "گیتهاب",
+    "linkedIn": "لینکدین"
+  }
+}

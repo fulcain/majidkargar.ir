@@ -1,0 +1,14 @@
+{
+  "home": {
+    "name": "Majid Kargar",
+    "description": "Front-End Developer since Fall 2023"
+  },
+  "nav": {
+    "projects": "Projects",
+    "contact-me": "Contact Me"
+  },
+  "not-found": {
+"page-not-found":"Page Not Found!",
+		"go-back-to-home":"Go Back to Home"
+	}
+}

@@ -1,10 +1,10 @@
 export const links = [
   {
     href: "/projects",
-    text: "پروژه ها",
+    text: "projects",
   },
   {
     href: "/contact",
-    text: "ارتباط با من",
+    text: "contact-me",
   },
 ];
