@@ -15,5 +15,15 @@
     "email": "ایمیل",
     "github": "گیتهاب",
     "linkedIn": "لینکدین"
+  },
+  "projects": {
+    "title": "پروژه ها",
+    "description": "مجموعه از پروژه های تمرینی و نمونه کار ها.",
+    "work": "کاری",
+    "Personal": "شخصی",
+    "description-text": "توضیحات",
+    "tools": "ابزار استفاده شده",
+    "view-project": "مشاهده پروژه",
+    "view-code": "مشاهده کد"
   }
 }

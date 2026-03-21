@@ -8,7 +8,22 @@
     "contact-me": "Contact Me"
   },
   "not-found": {
-"page-not-found":"Page Not Found!",
-		"go-back-to-home":"Go Back to Home"
-	}
+    "page-not-found": "Page Not Found!",
+    "go-back-to-home": "Go Back to Home"
+  },
+  "contact-me": {
+    "email": "Email",
+    "github": "Github",
+    "linkedIn": "LinkedIn"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Collection of training and client projects.",
+    "work": "Work",
+    "personal": "Personal",
+    "description-text": "Description",
+    "tools": "Used Technologies",
+    "view-project": "View Project",
+    "view-code": "View Code"
+  }
 }

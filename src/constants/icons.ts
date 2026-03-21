@@ -4,10 +4,7 @@ export const icons = {
   SASS: { className: "devicon-sass-original", color: "#CF649A" },
   TailwindCSS: { className: "devicon-tailwindcss-original", color: "#06B6D4" },
   Bootstrap: { className: "devicon-bootstrap-plain", color: "#7952B3" },
-  JavaScript: {
-    className: "devicon-javascript-plain colored",
-    color: "#323330",
-  },
+  JavaScript: { className: "devicon-javascript-plain colored", color: "#323330" },
   TypeScript: { className: "devicon-typescript-plain", color: "#3178C6" },
   MUI: { className: "devicon-materialui-plain", color: "#007FFF" },
   ChartJS: { svgLink: "/icons/chartjs.svg", color: "#ff6384" },
@@ -24,3 +21,5 @@ export const icons = {
   alpineJS: { className: "devicon-alpinejs-original", color: "#77C1D2" },
   antDesign: { className: "devicon-antdesign-plain", color: "#4285eb" },
 };
+
+export type IconKey = keyof typeof icons;
