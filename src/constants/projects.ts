@@ -166,8 +166,10 @@ export const projects: ProjectType[] = [
     technologies: [
       tech("TAILWIND", "TailwindCSS"),
       tech("TYPESCRIPT", "TypeScript"),
-      tech("REACT", "React"),
       tech("NEXT", "NextJS"),
+      tech("FRAMER", "framer"),
+      // TODO: Add supabase, ShadCN, Yup, Zustand
     ],
-  },
+	},
+	// TODO: Add FTD-App | LSEMS Project
 ];
