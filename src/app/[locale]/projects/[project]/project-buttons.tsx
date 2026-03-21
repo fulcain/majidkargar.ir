@@ -14,7 +14,7 @@ export async function ProjectButtons({
   liveLink,
   repoLink,
 }: ProjectButtonsProps) {
-  const t = await getTranslations("project");
+  const t = await getTranslations("projects");
 
   return (
     <div className="flex flex-row gap-2">

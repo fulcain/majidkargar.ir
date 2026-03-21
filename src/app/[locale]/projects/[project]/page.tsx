@@ -21,7 +21,7 @@ export async function generateStaticParams() {
 
 export default async function Project({ params }: ProjectProps) {
   const { project: projectNameInPathname, locale } = await params;
-  const t = await getTranslations("project");
+  const t = await getTranslations("projects");
 
   const currentProject = projects.filter(
     (project) => project.urlPath === projectNameInPathname,
