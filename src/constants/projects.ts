@@ -35,7 +35,7 @@ export const projects: ProjectType[] = [
       fa: "پورتفولیو ای که الان دارید میبینید.",
       en: "The portfolio you are currently viewing.",
     },
-    urlPath: "majidkargar.ir",
+    urlPath: "portfolio",
     isSpecial: false,
     isPrivate: false,
     hasLiveLink: true,
@@ -45,8 +45,8 @@ export const projects: ProjectType[] = [
       tech("TYPESCRIPT", "TypeScript"),
       tech("NEXT", "NextJS"),
       tech("MUI", "MUI"),
-      tech("VERCEL", "vercel"),
       tech("FRAMER", "framer"),
+      // TODO: add dev icons
     ],
   },
   {

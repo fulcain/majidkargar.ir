@@ -15,7 +15,6 @@ export const icons = {
   swiper: { className: "devicon-swiper-original", color: "#6332F6" },
   radixui: { svgLink: "/icons/radixui.svg", color: "#20232A" },
   lucide: { svgLink: "/icons/lucide.svg", color: "#8B5CF6" },
-  vercel: { className: "devicon-vercel-original", color: "#20232A" },
   framer: { className: "devicon-framermotion-original", color: "#0055FF" },
   ejs: { svgLink: "/icons/ejs.svg", color: "#323330" },
   alpineJS: { className: "devicon-alpinejs-original", color: "#77C1D2" },
