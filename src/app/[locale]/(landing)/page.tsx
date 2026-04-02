@@ -1,15 +1,11 @@
 "use client";
 import { HomeNavigation } from "./home-navigation";
-import localFont from "next/font/local";
 import { Bounce, Zoom } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
 import { useTranslations } from "next-intl";
 import SetLanguage from "@/src/components/set-language";
-
-const gAseman = localFont({
-  src: "../../../style/fonts/g-aseman.ttf",
-  display: "swap",
-});
+import { exo_2 } from "@/src/constants/exo-font";
+import { gAseman } from "@/src/constants/g-aseman-font";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -27,7 +23,7 @@ export default function Home() {
             </Bounce>
           </div>
           <Zoom>
-            <h1 className={`${gAseman.className} text-[80px] md:text-[100px]`}>
+            <h1 className={`${gAseman.className} ${exo_2.className} text-[80px] md:text-[100px]`}>
               {t("name")}
             </h1>
           </Zoom>
