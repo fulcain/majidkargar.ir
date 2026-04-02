@@ -170,6 +170,51 @@ export const projects: ProjectType[] = [
       tech("FRAMER", "framer"),
       // TODO: Add supabase, ShadCN, Yup, Zustand
     ],
-	},
-	// TODO: Add FTD-App | LSEMS Project
+  },
+  {
+    projectName: {
+      fa: "اپلیکیشن مدیریت فیلد ترینینگ | ECRP",
+      en: "Field Training Dashboard | ECRP",
+    },
+    liveLink: "https://ecrp-ftd.vercel.app",
+    repoLink: "https://github.com/fulcain/ECRP-FTD",
+    description: {
+      fa: "یک اپلیکیشن برای مدیریت و مانیتورینگ جلسات Field Training در فکشن LSEMS سرور Eclipse Roleplay (ECRP). این اپلیکیشن داده‌های مربوط به جلسات آموزشی را مستقیماً از Google Sheets دریافت کرده و آن‌ها را پردازش می‌کند تا بینش‌ها و آمارهای مفیدی تولید کند. این آنالیزها باعث می‌شوند پیگیری عملکرد اعضا و مدیریت فعالیت‌ها بسیار ساده‌تر و سریع‌تر انجام شود. این پروژه برای فکشن LSEMS در سرور Eclipse Roleplay توسعه داده شده و دسترسی به آن با سیستم رمز عبور محافظت می‌شود.",
+      en: "A application designed to manage and monitor Field Training sessions in the Eclipse Roleplay (ECRP) server for LSEMS Faction. The app pulls training session data directly from Google Sheets and processes it to generate insights. These analytics make performance tracking and management significantly easier. The project was developed for the LSEMS Faction on the Eclipse Roleplay server and is protected with password-based access.",
+    },
+    urlPath: "ftd-ecrp",
+    isSpecial: true,
+    isPrivate: false,
+    hasLiveLink: true,
+    projectType: "personal",
+    technologies: [
+      tech("TAILWIND", "TailwindCSS"),
+      tech("TYPESCRIPT", "TypeScript"),
+      tech("NEXT", "NextJS"),
+      // TODO: Add Google Sheets, ShadCN
+    ],
+  },
+  {
+    projectName: {
+      fa: "اپلیکیشن فکشن اورژانس | ECRP",
+      en: "LSEMS App | ECRP",
+    },
+    liveLink: "https://ecrp-lsems.vercel.app/",
+    repoLink: "http://github.com/fulcain/LSEMS-App",
+    description: {
+      en: "An application designed to simplify common LSEMS Faction tasks such as creating properly formatted emails, accessing important internal links, converting time zones, and adding availability times. The app is publicly accessible and can be used by anyone, however most of the internal links lead to private resources that are only accessible through the Eclipse Roleplay Government website if the user has the required permissions. The application was built to make day to day administrative and paperwork related tasks faster, easier, and more organized.",
+      fa: "یک اپلیکیشن طراحی شده برای ساده‌تر کردن کارهای روزمره فکشن LSEMS مانند ساخت ایمیل‌ها با فرمت صحیح، دسترسی سریع به لینک‌های مهم، تبدیل تایم‌زون‌ها و اضافه کردن زمان‌های در دسترس بودن. این اپلیکیشن به صورت عمومی در دسترس است و همه می‌توانند از آن استفاده کنند، اما بیشتر لینک‌های داخلی آن به منابع خصوصی اشاره دارند که فقط در وبسایت Government سرور Eclipse Roleplay و در صورت داشتن دسترسی لازم قابل مشاهده هستند. این برنامه با هدف ساده‌تر، سریع‌تر و منظم‌تر کردن کارهای اداری روزمره ساخته شده است.",
+    },
+    urlPath: "lsems-ecrp",
+    isSpecial: true,
+    isPrivate: false,
+    hasLiveLink: true,
+    projectType: "personal",
+    technologies: [
+      tech("TAILWIND", "TailwindCSS"),
+      tech("TYPESCRIPT", "TypeScript"),
+      tech("NEXT", "NextJS"),
+      // TODO: Add ShadCN
+    ],
+  },
 ];
