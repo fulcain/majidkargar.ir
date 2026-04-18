@@ -1,12 +1,14 @@
 import { Card } from "@/src/components/card";
 import { ProjectType } from "@/src/constants/projects";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 type ProjectCardType = {
   project: ProjectType;
 };
 
 export const ProjectCard = ({ project }: ProjectCardType) => {
+  const locale = useLocale();
   const { projectName, description, urlPath } = project;
 
   return (
@@ -18,10 +20,10 @@ export const ProjectCard = ({ project }: ProjectCardType) => {
         <span
           className={"mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"}
         >
-          {projectName}
+          {projectName[locale as "en" | "fa"]}
         </span>
         <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-          {description}
+          {description[locale as "en" | "fa"]}
         </p>
       </Link>
     </Card>

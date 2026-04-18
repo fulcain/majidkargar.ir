@@ -1,5 +1,6 @@
 import { Code, LaptopMac } from "@mui/icons-material";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
 type ProjectButtonsProps = {
   hasLiveLink: boolean;
@@ -8,12 +9,14 @@ type ProjectButtonsProps = {
   repoLink: string;
 };
 
-export const ProjectButtons = ({
+export async function ProjectButtons({
   hasLiveLink,
   isPrivate,
   liveLink,
   repoLink,
-}: ProjectButtonsProps) => {
+}: ProjectButtonsProps) {
+  const t = await getTranslations("projects");
+
   return (
     <div className="flex flex-row gap-2">
       {hasLiveLink && (
@@ -22,10 +25,7 @@ export const ProjectButtons = ({
           target="_blank"
           href={liveLink}
         >
-          <div className="flex flex-row gap-2 items-center justify-center">
-            <span>مشاهده پروژه</span>
-            <LaptopMac />
-          </div>
+          {t("view-project")}
         </Link>
       )}
 
@@ -35,12 +35,9 @@ export const ProjectButtons = ({
           href={repoLink}
           target="_blank"
         >
-          <div className="flex flex-row gap-2 items-center justify-center">
-            <span> مشاهده کد</span>
-            <Code />
-          </div>
+          {t("view-code")}
         </Link>
       )}
     </div>
   );
-};
+}
