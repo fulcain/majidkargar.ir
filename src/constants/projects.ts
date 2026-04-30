@@ -149,7 +149,7 @@ export const projects: ProjectType[] = [
   },
   {
     projectName: {
-      fa: "مدیریت فکشن‌ها | ECRP",
+      fa: " | ECRP",
       en: "Legal Faction Management | ECRP",
     },
     liveLink: "",
@@ -216,13 +216,18 @@ export const projects: ProjectType[] = [
       tech("NEXT", "NextJS"),
       // TODO: Add ShadCN
     ],
-	},
-	  {
-    projectName: "فرانت چپتر ۱۴۰۳",
+  },
+  {
+    projectName: {
+      fa: "فرانت چپتر ۱۴۰۳",
+      en: "Front Chapter 2024",
+    },
     liveLink: "https://frontchapter.ir/",
     repoLink: "https://github.com/frontchapter/nextjs/",
-    description:
-      "همکاری به عنوان برنامه نویس فرانت اند در پروژه لندینگ همایش فرانت چپتر در سال ۱۴۰۳.",
+    description: {
+      fa: "همکاری به عنوان برنامه نویس فرانت اند در پروژه لندینگ همایش فرانت چپتر در سال ۱۴۰۳.",
+      en: "Worked as a frontend developer on the Front Chapter conference landing page in 2024.",
+    },
     urlPath: "frontchapter03",
     isSpecial: true,
     isPrivate: false,
@@ -246,13 +251,11 @@ export const projects: ProjectType[] = [
       {
         name: "NEXT.JS",
         icon: { className: icons.NextJS.className, color: icons.NextJS.color },
-	  },
-	  {
+      },
+      {
         name: "LaunchUI",
         icon: { svgLink: icons.launchui.svgLink, color: icons.launchui.color },
       },
     ],
   },
 ];
-
-
