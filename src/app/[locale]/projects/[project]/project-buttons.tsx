@@ -1,4 +1,4 @@
-import { Code, LaptopMac } from "@mui/icons-material";
+
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
