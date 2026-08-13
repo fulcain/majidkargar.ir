@@ -50,7 +50,7 @@ export async function generateMetadata({
       card: "summary_large_image",
     },
     icons: {
-      shortcut: "/favicon.png",
+      shortcut: "/favicon.ico",
     },
     robots: {
       index: true,
