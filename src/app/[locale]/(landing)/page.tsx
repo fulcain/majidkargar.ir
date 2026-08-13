@@ -23,7 +23,7 @@ export default function Home() {
             </Bounce>
           </div>
           <Zoom>
-            <h1 className={`${gAseman.className} ${exo_2.className} text-[80px] md:text-[100px]`}>
+            <h1 className={`${gAseman.className} ${exo_2.className} text-[44px] sm:text-[64px] md:text-[80px] lg:text-[100px]`}>
               {t("name")}
             </h1>
           </Zoom>

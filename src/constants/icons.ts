@@ -21,6 +21,17 @@ export const icons = {
   antDesign: { className: "devicon-antdesign-plain", color: "#4285eb" },
   shadcn: { svgLink: "/icons/shadcn.svg", color: "#20232A" },
   launchui: { svgLink: "/icons/launchui.svg", color: "#20232A" },
+  MongoDB: { className: "devicon-mongodb-plain", color: "#47A248" },
+  NodeJS: { className: "devicon-nodejs-plain colored", color: "#339933" },
+  Express: { className: "devicon-express-original", color: "#20232A" },
+  Capacitor: { className: "devicon-capacitor-plain", color: "#119EFF" },
+  Electron: { className: "devicon-electron-original", color: "#47848F" },
+  Google: { className: "devicon-google-plain", color: "#4285F4" },
+  GitHubActions: { className: "devicon-githubactions-plain", color: "#2088FF" },
+  Vite: { className: "devicon-vitejs-plain", color: "#646CFF" },
+  Supabase: { className: "devicon-supabase-plain", color: "#3ECF8E" },
+  Vercel: { className: "devicon-vercel-original", color: "#20232A" },
+  NPM: { className: "devicon-npm-original-wordmark", color: "#CB3837" },
 };
 
 export type IconKey = keyof typeof icons;
