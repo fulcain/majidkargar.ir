@@ -20,6 +20,8 @@ export type ProjectType = {
   hasLiveLink: boolean;
   technologies: TechnologiesType;
   projectType: "work" | "personal";
+  /** Display order; assigned in MongoDB (admin panel reorders this). */
+  order?: number;
 };
 
 function tech(name: string, key: IconKey): TechnologiesType[number] {

@@ -1,10 +1,11 @@
 import { Navbar } from "@/src/components/navbar";
 import { Separator } from "@/src/components/seperator";
-import { projects } from "@/src/constants/projects";
+import { getProjects } from "@/src/lib/projects";
 import { Technologies } from "./technologies";
 import { ProjectButtons } from "./project-buttons";
 import { ProjectTitle } from "./project-title";
 import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
 
 type ProjectProps = {
   params: Promise<{
@@ -13,9 +14,13 @@ type ProjectProps = {
   }>;
 };
 
-export const dynamicParams = false;
+// New or renamed projects added via the admin panel must render without a redeploy.
+export const dynamicParams = true;
+
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
+  const projects = await getProjects();
   return projects.map((project) => ({ project: project.urlPath }));
 }
 
@@ -23,9 +28,14 @@ export default async function Project({ params }: ProjectProps) {
   const { project: projectNameInPathname, locale } = await params;
   const t = await getTranslations("projects");
 
+  const projects = await getProjects();
   const currentProject = projects.filter(
     (project) => project.urlPath === projectNameInPathname,
   )[0];
+
+  if (!currentProject) {
+    notFound();
+  }
 
   const {
     projectName,

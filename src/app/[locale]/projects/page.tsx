@@ -2,13 +2,16 @@ import { Separator } from "@/src/components/seperator";
 import { Navbar } from "@/src/components/navbar";
 import { Title } from "./title";
 import { ProjectCard } from "./project-card";
-import { projects } from "@/src/constants/projects";
-import { useTranslations } from "next-intl";
+import { getProjects } from "@/src/lib/projects";
+import { getTranslations } from "next-intl/server";
 
-const Projects = () => {
+export const revalidate = 3600;
+
+const Projects = async () => {
+  const projects = await getProjects();
   const normalProjects = projects.filter((project) => !project.isSpecial);
   const specialProjects = projects.filter((project) => project.isSpecial);
-  const t = useTranslations("projects");
+  const t = await getTranslations("projects");
 
   return (
     <>

@@ -1,6 +1,6 @@
 import { exo_2 } from "@/src/constants/exo-font";
 import { TechnologiesType } from "@/src/constants/projects";
-import Image from "next/image";
+import { TechIcon } from "@/src/components/tech-icon";
 
 type TechnologiesProps = {
   technologies: TechnologiesType;
@@ -21,20 +21,7 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
             <span className="flex justify-center items-center text-xs md:text-sm text-white">
               {tech.name}
             </span>
-
-            <div className="flex items-center justify-center rounded-full">
-              {tech.icon.svgLink && (
-                <Image
-                  alt={tech.name}
-                  src={tech.icon.svgLink}
-                  width={24}
-                  height={24}
-                />
-              )}
-              {tech.icon.className && (
-                <i className={`text-[24px]  ${tech.icon.className}`}></i>
-              )}
-            </div>
+            <TechIcon icon={tech.icon} name={tech.name} />
           </div>
         );
       })}
