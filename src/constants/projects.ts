@@ -87,6 +87,123 @@ export const projects: ProjectType[] = [
     ],
   },
   {
+    projectName: {
+      fa: "مدیریت فکشن ها | ECRP",
+      en: "Legal Faction Management | ECRP",
+    },
+    liveLink: "",
+    repoLink: "",
+    description: {
+      fa: "ابزاری برای مانیتورینگ لیدرهای فکشن‌های قانونی در سرور ECRP که ساعت کاری هر لیدر را به‌صورت جدول محاسبه می‌کند، فعال‌ترین کاراکتر هر لیدر، فعال‌ترین لیدر ماه، هفته و ماه گذشته و بسیاری آمار دیگر را نمایش می‌دهد تا کارها ساده‌تر شود. این پروژه برای یک مشتری در سرور Eclipse Roleplay ساخته شده است. دارای داشبورد تحلیلی با نمودار، اعتبارسنجی فرم‌ها با Yup و مدیریت state با Zustand.",
+      en: "A tool that monitors legal faction leaders in ECRP, showing work hours in tables for each leader, identifying the most active character per leader, the most active leader of the month, last week and last month, plus many more calculations. Built for a client on the Eclipse Roleplay server. Features an analytics dashboard with charts, Yup form validation and Zustand state management.",
+    },
+    urlPath: "lfm-ecrp",
+    isSpecial: true,
+    isPrivate: true,
+    hasLiveLink: false,
+    projectType: "work",
+    technologies: [
+      tech("TAILWIND", "TailwindCSS"),
+      tech("TYPESCRIPT", "TypeScript"),
+      tech("NEXT", "NextJS"),
+      tech("FRAMER", "framer"),
+      tech("SUPABASE", "Supabase"),
+      tech("SHADCN", "shadcn"),
+      techText("YUP", "#e02035"),
+      techText("ZUSTAND", "#764ABC"),
+    ],
+  },
+    {
+    projectName: {
+      fa: "فرانت چپتر ۱۴۰۳",
+      en: "Front Chapter 2024",
+    },
+    liveLink: "https://frontchapter.ir/",
+    repoLink: "https://github.com/frontchapter/nextjs/",
+    description: {
+      fa: "همکاری به‌عنوان توسعه‌دهنده فرانت‌اند در پروژه لندینگ همایش فرانت چپتر ۱۴۰۳. همکاری با یک تیم بزرگ‌تر، پیاده‌سازی کامپوننت‌های رابط کاربری و استایل‌دهی با Tailwind CSS.",
+      en: "Worked as a frontend developer on the Front Chapter conference landing page in 2024. Collaborated within a larger team, implemented UI components and styled with Tailwind CSS.",
+    },
+    urlPath: "frontchapter03",
+    isSpecial: true,
+    isPrivate: false,
+    hasLiveLink: true,
+    projectType: "work",
+    technologies: [
+      {
+        name: "TAILWIND",
+        icon: {
+          className: icons.TailwindCSS.className,
+          color: icons.TailwindCSS.color,
+        },
+      },
+      {
+        name: "TYPESCRIPT",
+        icon: {
+          className: icons.TypeScript.className,
+          color: icons.TypeScript.color,
+        },
+      },
+      {
+        name: "NEXT.JS",
+        icon: { className: icons.NextJS.className, color: icons.NextJS.color },
+      },
+      {
+        name: "LaunchUI",
+        icon: { svgLink: icons.launchui.svgLink, color: icons.launchui.color },
+      },
+      {
+        name: "LUCIDE",
+        icon: { svgLink: icons.lucide.svgLink, color: icons.lucide.color },
+      },
+    ],
+  },
+    {
+    projectName: { fa: "سیلورباکس", en: "SilverBox" },
+    liveLink: "https://silverBoxjs.ir",
+    repoLink: "https://github.com/silverethical/silverBox",
+    description: {
+      fa: "یک کتابخانه جاوااسکریپت متن‌باز و سبک (بدون وابستگی) برای ساخت مودال و هشدارهای قابل سفارشی‌سازی که به‌صورت پکیج npm منتشر شده و مستندات آنلاین دارد.",
+      en: "An open source, lightweight zero-dependency JavaScript library for building customizable modals and alerts, published as an npm package with online documentation.",
+    },
+    urlPath: "silverbox",
+    isSpecial: true,
+    isPrivate: false,
+    hasLiveLink: true,
+    projectType: "personal",
+    technologies: [
+      tech("SASS", "SASS"),
+      tech("JAVASCRIPT", "JavaScript"),
+      tech("NPM", "NPM"),
+    ],
+  },
+  {
+    projectName: {
+      fa: "اپلیکیشن فکشن اورژانس | ECRP",
+      en: "LSEMS App | ECRP",
+    },
+    liveLink: "https://ecrp-lsems.vercel.app/",
+    repoLink: "https://github.com/fulcain/ECRP-LSEMS",
+    description: {
+      en: "An application designed to simplify common LSEMS Faction tasks such as creating properly formatted emails, accessing important internal links, converting time zones, and adding availability times. Includes form validation with Formik + Yup, timezone conversion and a clean component library built on Radix UI. The app is publicly accessible and can be used by anyone, however most of the internal links lead to private resources that are only accessible through the Eclipse Roleplay Government website if the user has the required permissions.",
+      fa: "اپلیکیشنی برای ساده‌تر کردن کارهای روزمره فکشن LSEMS؛ از ساخت ایمیل با فرمت درست و دسترسی سریع به لینک‌های مهم تا تبدیل تایم‌زون و ثبت زمان‌های حضور. دارای اعتبارسنجی فرم با Formik و Yup، تبدیل تایم‌زون و کامپوننت‌های ساخته‌شده با Radix UI. این اپلیکیشن به‌صورت عمومی در دسترس است و همه می‌توانند از آن استفاده کنند؛ اما بیشتر لینک‌های داخلی به منابع خصوصی اشاره دارند که فقط از طریق وب‌سایت Government سرور Eclipse Roleplay و با داشتن دسترسی لازم قابل مشاهده هستند.",
+    },
+    urlPath: "lsems-ecrp",
+    isSpecial: true,
+    isPrivate: false,
+    hasLiveLink: true,
+    projectType: "personal",
+    technologies: [
+      tech("TAILWIND", "TailwindCSS"),
+      tech("TYPESCRIPT", "TypeScript"),
+      tech("NEXT", "NextJS"),
+      tech("SHADCN", "shadcn"),
+      techText("FORMIK", "#2563eb"),
+      techText("YUP", "#e02035"),
+      tech("LUCIDE", "lucide"),
+    ],
+  },
+  {
     projectName: { fa: "وبسایت شخصی", en: "Personal Website" },
     liveLink: "https://majidkargar.ir",
     repoLink: "https://github.com/fulcain/majidkargar.ir",
@@ -173,25 +290,6 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    projectName: { fa: "سیلورباکس", en: "SilverBox" },
-    liveLink: "https://silverBoxjs.ir",
-    repoLink: "https://github.com/silverethical/silverBox",
-    description: {
-      fa: "یک کتابخانه جاوااسکریپت متن‌باز و سبک (بدون وابستگی) برای ساخت مودال و هشدارهای قابل سفارشی‌سازی که به‌صورت پکیج npm منتشر شده و مستندات آنلاین دارد.",
-      en: "An open source, lightweight zero-dependency JavaScript library for building customizable modals and alerts, published as an npm package with online documentation.",
-    },
-    urlPath: "silverbox",
-    isSpecial: true,
-    isPrivate: false,
-    hasLiveLink: true,
-    projectType: "personal",
-    technologies: [
-      tech("SASS", "SASS"),
-      tech("JAVASCRIPT", "JavaScript"),
-      tech("NPM", "NPM"),
-    ],
-  },
-  {
     projectName: { fa: "فاکتور فروش رمیونا", en: "Remiona Sales Invoice" },
     liveLink: "https://factor.remiona.ir/",
     repoLink: "https://github.com/Silverethical/online_invoice/",
@@ -214,33 +312,7 @@ export const projects: ProjectType[] = [
       tech("Ant Design", "antDesign"),
     ],
   },
-  {
-    projectName: {
-      fa: "مدیریت فکشن ها | ECRP",
-      en: "Legal Faction Management | ECRP",
-    },
-    liveLink: "",
-    repoLink: "",
-    description: {
-      fa: "ابزاری برای مانیتورینگ لیدرهای فکشن‌های قانونی در سرور ECRP که ساعت کاری هر لیدر را به‌صورت جدول محاسبه می‌کند، فعال‌ترین کاراکتر هر لیدر، فعال‌ترین لیدر ماه، هفته و ماه گذشته و بسیاری آمار دیگر را نمایش می‌دهد تا کارها ساده‌تر شود. این پروژه برای یک مشتری در سرور Eclipse Roleplay ساخته شده است. دارای داشبورد تحلیلی با نمودار، اعتبارسنجی فرم‌ها با Yup و مدیریت state با Zustand.",
-      en: "A tool that monitors legal faction leaders in ECRP, showing work hours in tables for each leader, identifying the most active character per leader, the most active leader of the month, last week and last month, plus many more calculations. Built for a client on the Eclipse Roleplay server. Features an analytics dashboard with charts, Yup form validation and Zustand state management.",
-    },
-    urlPath: "lfm-ecrp",
-    isSpecial: true,
-    isPrivate: true,
-    hasLiveLink: false,
-    projectType: "work",
-    technologies: [
-      tech("TAILWIND", "TailwindCSS"),
-      tech("TYPESCRIPT", "TypeScript"),
-      tech("NEXT", "NextJS"),
-      tech("FRAMER", "framer"),
-      tech("SUPABASE", "Supabase"),
-      tech("SHADCN", "shadcn"),
-      techText("YUP", "#e02035"),
-      techText("ZUSTAND", "#764ABC"),
-    ],
-  },
+
   {
     projectName: {
       fa: "اپلیکیشن مدیریت فیلد ترینینگ | ECRP",
@@ -267,75 +339,6 @@ export const projects: ProjectType[] = [
       tech("LUCIDE", "lucide"),
     ],
   },
-  {
-    projectName: {
-      fa: "اپلیکیشن فکشن اورژانس | ECRP",
-      en: "LSEMS App | ECRP",
-    },
-    liveLink: "https://ecrp-lsems.vercel.app/",
-    repoLink: "https://github.com/fulcain/ECRP-LSEMS",
-    description: {
-      en: "An application designed to simplify common LSEMS Faction tasks such as creating properly formatted emails, accessing important internal links, converting time zones, and adding availability times. Includes form validation with Formik + Yup, timezone conversion and a clean component library built on Radix UI. The app is publicly accessible and can be used by anyone, however most of the internal links lead to private resources that are only accessible through the Eclipse Roleplay Government website if the user has the required permissions.",
-      fa: "اپلیکیشنی برای ساده‌تر کردن کارهای روزمره فکشن LSEMS؛ از ساخت ایمیل با فرمت درست و دسترسی سریع به لینک‌های مهم تا تبدیل تایم‌زون و ثبت زمان‌های حضور. دارای اعتبارسنجی فرم با Formik و Yup، تبدیل تایم‌زون و کامپوننت‌های ساخته‌شده با Radix UI. این اپلیکیشن به‌صورت عمومی در دسترس است و همه می‌توانند از آن استفاده کنند؛ اما بیشتر لینک‌های داخلی به منابع خصوصی اشاره دارند که فقط از طریق وب‌سایت Government سرور Eclipse Roleplay و با داشتن دسترسی لازم قابل مشاهده هستند.",
-    },
-    urlPath: "lsems-ecrp",
-    isSpecial: true,
-    isPrivate: false,
-    hasLiveLink: true,
-    projectType: "personal",
-    technologies: [
-      tech("TAILWIND", "TailwindCSS"),
-      tech("TYPESCRIPT", "TypeScript"),
-      tech("NEXT", "NextJS"),
-      tech("SHADCN", "shadcn"),
-      techText("FORMIK", "#2563eb"),
-      techText("YUP", "#e02035"),
-      tech("LUCIDE", "lucide"),
-    ],
-  },
-  {
-    projectName: {
-      fa: "فرانت چپتر ۱۴۰۳",
-      en: "Front Chapter 2024",
-    },
-    liveLink: "https://frontchapter.ir/",
-    repoLink: "https://github.com/frontchapter/nextjs/",
-    description: {
-      fa: "همکاری به‌عنوان توسعه‌دهنده فرانت‌اند در پروژه لندینگ همایش فرانت چپتر ۱۴۰۳. همکاری با یک تیم بزرگ‌تر، پیاده‌سازی کامپوننت‌های رابط کاربری و استایل‌دهی با Tailwind CSS.",
-      en: "Worked as a frontend developer on the Front Chapter conference landing page in 2024. Collaborated within a larger team, implemented UI components and styled with Tailwind CSS.",
-    },
-    urlPath: "frontchapter03",
-    isSpecial: true,
-    isPrivate: false,
-    hasLiveLink: true,
-    projectType: "work",
-    technologies: [
-      {
-        name: "TAILWIND",
-        icon: {
-          className: icons.TailwindCSS.className,
-          color: icons.TailwindCSS.color,
-        },
-      },
-      {
-        name: "TYPESCRIPT",
-        icon: {
-          className: icons.TypeScript.className,
-          color: icons.TypeScript.color,
-        },
-      },
-      {
-        name: "NEXT.JS",
-        icon: { className: icons.NextJS.className, color: icons.NextJS.color },
-      },
-      {
-        name: "LaunchUI",
-        icon: { svgLink: icons.launchui.svgLink, color: icons.launchui.color },
-      },
-      {
-        name: "LUCIDE",
-        icon: { svgLink: icons.lucide.svgLink, color: icons.lucide.color },
-      },
-    ],
-  },
+
+
 ];
