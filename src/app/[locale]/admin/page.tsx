@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getProjects } from "@/src/lib/projects";
 import { getIcons } from "@/src/lib/icons";
+import { getVaultEntries } from "@/src/lib/vault";
 import { isAdminAuthed, isAdminConfigured } from "@/src/lib/admin-auth";
 import { LoginForm } from "./login-form";
 import { AdminPanel } from "./admin-panel";
@@ -34,7 +35,18 @@ export default async function AdminPage({
     return <LoginForm locale={locale} />;
   }
 
-  const [projects, icons] = await Promise.all([getProjects(), getIcons()]);
+  const [projects, icons, vaultEntries] = await Promise.all([
+    getProjects(),
+    getIcons(),
+    getVaultEntries(),
+  ]);
 
-  return <AdminPanel projects={projects} icons={icons} locale={locale} />;
+  return (
+    <AdminPanel
+      projects={projects}
+      icons={icons}
+      vaultEntries={vaultEntries}
+      locale={locale}
+    />
+  );
 }

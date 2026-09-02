@@ -5,24 +5,27 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { ProjectType } from "@/src/constants/projects";
 import type { IconEntry } from "@/src/lib/icons";
+import type { VaultEntry } from "@/src/lib/vault";
 import { deleteProject, moveProject, reorderProjects } from "./actions";
 import { ProjectForm } from "./project-form";
 import { IconsManager } from "./icons-manager";
+import { VaultManager } from "./vault-manager";
 
 type AdminPanelProps = {
   projects: ProjectType[];
   icons: IconEntry[];
+  vaultEntries: VaultEntry[];
   locale: string;
 };
 
-export const AdminPanel = ({ projects, icons, locale }: AdminPanelProps) => {
+export const AdminPanel = ({ projects, icons, vaultEntries, locale }: AdminPanelProps) => {
   const router = useRouter();
   const [adding, setAdding] = useState(false);
   const [editing, setEditing] = useState<ProjectType | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [dragIndex, setDragIndex] = useState<number | null>(null);
   const [overIndex, setOverIndex] = useState<number | null>(null);
-  const [tab, setTab] = useState<"projects" | "icons">("projects");
+  const [tab, setTab] = useState<"projects" | "icons" | "passwords">("projects");
 
   async function handleDelete(urlPath: string) {
     if (!window.confirm(`Delete "${urlPath}"?`)) return;
@@ -110,9 +113,14 @@ export const AdminPanel = ({ projects, icons, locale }: AdminPanelProps) => {
           <TabButton active={tab === "icons"} onClick={() => setTab("icons")}>
             Icons
           </TabButton>
+          <TabButton active={tab === "passwords"} onClick={() => setTab("passwords")}>
+            Passwords
+          </TabButton>
         </div>
 
         {tab === "icons" && <IconsManager icons={icons} />}
+
+        {tab === "passwords" && <VaultManager entries={vaultEntries} />}
 
         {tab === "projects" && (
           <>

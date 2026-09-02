@@ -43,3 +43,6 @@ next-env.d.ts
 old-site
 
 .freebuff
+
+# Plaintext vault seed — contains real credentials, never commit
+/data/vault-seed.json
