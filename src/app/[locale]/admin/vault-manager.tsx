@@ -11,7 +11,7 @@ type VaultManagerProps = {
 };
 
 const inputClass =
-  "bg-zinc-900 border border-zinc-700 rounded px-3 py-2 outline-none focus:border-palette-primary";
+  "rounded-xl border border-white/10 bg-black/25 px-3.5 py-2.5 text-sm outline-none transition placeholder:text-zinc-700 focus:border-zinc-400/50 focus:ring-4 focus:ring-white/[0.04]";
 
 const emptyForm = (): VaultEntryInput => ({
   title: "",
@@ -84,120 +84,91 @@ export const VaultManager = ({ entries }: VaultManagerProps) => {
   }
 
   return (
-    <div className="flex flex-col gap-4">
-      <p className="text-xs text-zinc-600">
-        Stored encrypted (AES-256-GCM) in MongoDB. Only you can decrypt these.
-      </p>
-
+    <div className="flex flex-col gap-5">
       {error && <ErrorBanner message={error} onClose={() => setError(null)} />}
 
-      <div className="flex items-center gap-3">
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search passwords…"
-          className={`${inputClass} flex-1`}
-          spellCheck={false}
-        />
-        <button
-          onClick={() => setAdding(true)}
-          className="shrink-0 border border-palette-primary rounded px-4 py-2 hover:bg-gray-800 transition"
-        >
-          + Add password
-        </button>
+      <div className="flex flex-col gap-4 rounded-2xl border border-white/[0.07] bg-[#101116] p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+        <div className="min-w-0">
+          <p className="text-sm font-medium text-zinc-200">Your saved credentials</p>
+          <p className="mt-1 text-xs text-zinc-500">{filteredEntries.length} of {entries.length} entries</p>
+        </div>
+        <div className="flex min-w-0 flex-col gap-2 sm:w-auto sm:flex-row">
+          <div className="relative min-w-0 sm:w-64">
+            <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-600" aria-hidden="true">⌕</span>
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search vault…"
+              className={`${inputClass} w-full pl-9`}
+              spellCheck={false}
+            />
+          </div>
+          <button
+            onClick={() => setAdding(true)}
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-zinc-100 px-4 py-2.5 text-sm font-semibold text-zinc-950 transition hover:bg-white"
+          >
+            <span className="text-lg leading-none">+</span> Add entry
+          </button>
+        </div>
       </div>
-
-      <p className="text-sm text-zinc-500">
-        {filteredEntries.length} of {entries.length} passwords
+      <p className="flex items-center gap-2 px-1 text-xs text-zinc-600">
+        <span aria-hidden="true">▣</span>
+        Stored encrypted (AES-256-GCM) in MongoDB.
       </p>
 
       {filteredEntries.length === 0 && (
-        <p className="text-sm text-zinc-400">
-          {query ? `No passwords match “${query}”.` : "No passwords yet."}
-        </p>
+        <div className="rounded-2xl border border-dashed border-white/10 bg-white/[0.015] px-6 py-14 text-center">
+          <span className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.05] text-xl text-zinc-500" aria-hidden="true">▤</span>
+          <p className="font-medium text-zinc-300">{query ? "No matching entries" : "Your vault is empty"}</p>
+          <p className="mt-1 text-sm text-zinc-600">{query ? `Try another search for “${query}”.` : "Add an entry to keep your credentials together."}</p>
+        </div>
       )}
 
-      <ul className="flex flex-col gap-2">
+      <ul className="grid grid-cols-1 gap-3 xl:grid-cols-2">
         {filteredEntries.map((entry) => {
           const showPassword = Boolean(revealed[entry.id] && entry.password);
           const hasPassword = Boolean(entry.password);
           return (
             <li
               key={entry.id}
-              className="border border-zinc-800 rounded px-4 py-3 flex flex-col gap-2"
+              className="flex min-w-0 flex-col rounded-2xl border border-white/[0.07] bg-[#101116] p-4 transition hover:border-white/[0.13] sm:p-5"
             >
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div className="min-w-0">
-                  <p className="font-semibold truncate">{entry.title}</p>
-                  {entry.email && (
-                    <p className="text-sm text-zinc-400 truncate">
-                      {entry.email}
-                    </p>
-                  )}
-                  {entry.username && (
-                    <p className="text-sm text-zinc-500 truncate">
-                      {entry.username}
-                    </p>
-                  )}
-                  {hasPassword && (
-                    <p
-                      className={`text-sm truncate ${
-                        showPassword ? "font-mono" : "tracking-widest"
-                      }`}
-                      title={entry.password}
-                    >
-                      {showPassword ? entry.password : "••••••••••"}
-                    </p>
-                  )}
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex min-w-0 items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.07] bg-white/[0.04] text-sm font-semibold uppercase text-zinc-300">
+                    {entry.title.trim().charAt(0) || "•"}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="truncate font-medium text-zinc-100">{entry.title}</p>
+                    <p className="mt-1 truncate text-xs text-zinc-500">{entry.email || entry.username || "Saved account"}</p>
+                  </div>
                 </div>
-
-                <div className="flex items-center gap-2 shrink-0">
-                  {hasPassword && (
-                    <>
-                      <button
-                        onClick={() =>
-                          setRevealed((prev) => ({
-                            ...prev,
-                            [entry.id]: !prev[entry.id],
-                          }))
-                        }
-                        className="border border-zinc-700 rounded px-3 py-1 text-sm hover:bg-gray-800 transition"
-                        title={showPassword ? "Hide password" : "Show password"}
-                      >
-                        {showPassword ? "Hide" : "Show"}
-                      </button>
-                      {showPassword && (
-                        <button
-                          onClick={() =>
-                            copyToClipboard(entry.password!, entry.id)
-                          }
-                          className="border border-zinc-700 rounded px-3 py-1 text-sm hover:bg-gray-800 transition"
-                        >
-                          {copiedKey === entry.id ? "Copied!" : "Copy"}
-                        </button>
-                      )}
-                    </>
-                  )}
-                  <button
-                    onClick={() => setEditing(entry)}
-                    className="border border-zinc-700 rounded px-3 py-1 text-sm hover:bg-gray-800 transition"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => handleDelete(entry.id, entry.title)}
-                    className="border border-red-900 text-red-400 rounded px-3 py-1 text-sm hover:bg-red-950 transition"
-                  >
-                    Delete
-                  </button>
+                <div className="flex shrink-0 gap-1">
+                  <button onClick={() => setEditing(entry)} className="rounded-lg px-2.5 py-2 text-xs text-zinc-400 transition hover:bg-white/[0.06] hover:text-white">Edit</button>
+                  <button onClick={() => handleDelete(entry.id, entry.title)} className="rounded-lg px-2.5 py-2 text-xs text-zinc-500 transition hover:bg-red-400/[0.08] hover:text-red-300">Delete</button>
                 </div>
               </div>
 
-              {entry.notes && (
-                <p className="text-xs text-zinc-500 whitespace-pre-wrap break-words border-t border-zinc-800/60 pt-2">
-                  {entry.notes}
-                </p>
+              <div className="mt-4 grid grid-cols-1 gap-3 border-t border-white/[0.06] pt-4 sm:grid-cols-2">
+                {entry.email && <VaultDetail label="Email" value={entry.email} />}
+                {entry.username && <VaultDetail label="Username" value={entry.username} />}
+              </div>
+
+              {hasPassword && (
+                <div className="mt-4 flex items-center gap-2 rounded-xl border border-white/[0.06] bg-black/20 px-3 py-2.5">
+                  <span className={`min-w-0 flex-1 truncate text-sm text-zinc-300 ${showPassword ? "font-mono" : "tracking-[0.2em]"}`} title={showPassword ? entry.password : undefined}>
+                    {showPassword ? entry.password : "••••••••••••"}
+                  </span>
+                  <button onClick={() => setRevealed((prev) => ({ ...prev, [entry.id]: !prev[entry.id] }))} className="shrink-0 rounded-lg px-2.5 py-1.5 text-xs text-zinc-400 transition hover:bg-white/[0.07] hover:text-white" title={showPassword ? "Hide password" : "Show password"}>
+                    {showPassword ? "Hide" : "Reveal"}
+                  </button>
+                  <button onClick={() => copyToClipboard(entry.password!, entry.id)} className="shrink-0 rounded-lg border border-white/[0.08] px-2.5 py-1.5 text-xs text-zinc-300 transition hover:bg-white/[0.07]">
+                    {copiedKey === entry.id ? "Copied" : "Copy"}
+                  </button>
+                </div>
               )}
+
+              {entry.notes && <p className="mt-3 whitespace-pre-wrap break-words text-xs leading-relaxed text-zinc-500">{entry.notes}</p>}
             </li>
           );
         })}
@@ -250,81 +221,39 @@ const VaultForm = ({ entry, onCancel, onSaved }: VaultFormProps) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-      <h2 className="text-lg font-semibold">
-        {entry ? "Edit password" : "Add password"}
-      </h2>
+    <form onSubmit={handleSubmit} className="flex max-w-3xl flex-col gap-5 rounded-2xl border border-white/[0.07] bg-[#101116] p-5 sm:p-7">
+      <div className="border-b border-white/[0.06] pb-4">
+        <p className="mb-1 text-xs font-medium uppercase tracking-[0.16em] text-zinc-500">Password vault</p>
+        <h2 className="text-xl font-semibold">{entry ? "Edit entry" : "New entry"}</h2>
+        <p className="mt-1 text-sm text-zinc-500">Save the account details you want to keep together.</p>
+      </div>
 
-      <Field label="Title">
-        <input
-          value={form.title}
-          onChange={(e) => setField("title", e.target.value)}
-          placeholder="Steam"
-          className={inputClass}
-        />
-      </Field>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <Field label="Title"><input value={form.title} onChange={(e) => setField("title", e.target.value)} placeholder="Steam" className={inputClass} /></Field>
+        <Field label="Email"><input type="email" value={form.email ?? ""} onChange={(e) => setField("email", e.target.value)} placeholder="me@example.com" className={inputClass} /></Field>
+        <Field label="Username"><input value={form.username ?? ""} onChange={(e) => setField("username", e.target.value)} placeholder="cool_bmk1" className={inputClass} /></Field>
+        <Field label="Password">
+          <div className="flex gap-2">
+            <input type={showPassword ? "text" : "password"} value={form.password ?? ""} onChange={(e) => setField("password", e.target.value)} placeholder="••••••••" className={`${inputClass} min-w-0 flex-1 font-mono`} autoComplete="new-password" />
+            <button type="button" onClick={() => setShowPassword((prev) => !prev)} className="shrink-0 rounded-xl border border-white/10 px-3 text-sm text-zinc-300 transition hover:bg-white/[0.06]">{showPassword ? "Hide" : "Show"}</button>
+          </div>
+        </Field>
+      </div>
 
-      <Field label="Email / Gmail (optional)">
-        <input
-          type="email"
-          value={form.email ?? ""}
-          onChange={(e) => setField("email", e.target.value)}
-          placeholder="me@example.com"
-          className={inputClass}
-        />
-      </Field>
+      <Field label="Notes"><textarea value={form.notes ?? ""} onChange={(e) => setField("notes", e.target.value)} rows={4} className={`${inputClass} resize-y font-mono`} placeholder="Anything else worth remembering…" /></Field>
 
-      <Field label="Username (optional)">
-        <input
-          value={form.username ?? ""}
-          onChange={(e) => setField("username", e.target.value)}
-          placeholder="cool_bmk1"
-          className={inputClass}
-        />
-      </Field>
-
-      <Field label="Password (optional)">
-        <div className="flex gap-2">
-          <input
-            type={showPassword ? "text" : "password"}
-            value={form.password ?? ""}
-            onChange={(e) => setField("password", e.target.value)}
-            placeholder="••••••••"
-            className={`${inputClass} flex-1 font-mono`}
-            autoComplete="new-password"
-          />
-          <button
-            type="button"
-            onClick={() => setShowPassword((prev) => !prev)}
-            className="shrink-0 border border-zinc-700 rounded px-3 text-sm hover:bg-gray-800 transition"
-          >
-            {showPassword ? "Hide" : "Show"}
-          </button>
-        </div>
-      </Field>
-
-      <Field label="Notes">
-        <textarea
-          value={form.notes ?? ""}
-          onChange={(e) => setField("notes", e.target.value)}
-          rows={4}
-          className={`${inputClass} resize-y font-mono text-sm`}
-          placeholder="Anything else worth remembering…"
-        />
-      </Field>
-
-      <div className="flex gap-3">
+      <div className="flex flex-wrap gap-2 border-t border-white/[0.06] pt-4">
         <button
           type="submit"
           disabled={busy}
-          className="border border-palette-primary rounded px-6 py-2 hover:bg-gray-800 transition disabled:opacity-50"
+          className="rounded-xl bg-zinc-100 px-5 py-2.5 text-sm font-semibold text-zinc-950 transition hover:bg-white disabled:opacity-50"
         >
-          {busy ? "Saving…" : "Save password"}
+          {busy ? "Saving…" : "Save entry"}
         </button>
         <button
           type="button"
           onClick={onCancel}
-          className="border border-zinc-700 rounded px-6 py-2 hover:bg-gray-800 transition"
+          className="rounded-xl border border-white/10 px-5 py-2.5 text-sm text-zinc-300 transition hover:bg-white/[0.06]"
         >
           Cancel
         </button>
@@ -344,6 +273,13 @@ const Field = ({
     {label}
     {children}
   </label>
+);
+
+const VaultDetail = ({ label, value }: { label: string; value: string }) => (
+  <div className="min-w-0">
+    <p className="mb-1 text-[10px] font-medium uppercase tracking-[0.14em] text-zinc-600">{label}</p>
+    <p className="truncate text-sm text-zinc-400" title={value}>{value}</p>
+  </div>
 );
 
 const ErrorBanner = ({
